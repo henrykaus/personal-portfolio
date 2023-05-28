@@ -6,7 +6,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Henry Kaus</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0d3a3f7988.js"
+      crossorigin="anonymous"
+    ></script>
     <script defer src="app.js"></script>
   </head>
-  <body></body>
+  <body class="site-container">
+    <header class="heading">
+      <h1>Henry Kaus</h1>
+      <p>A student, intern, and above all else a creative.</p>
+      <nav>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#about-me">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#work-experience">Work Experience</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#projects">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content">
+      <article id="about-me">
+        <heading class="about__heading">
+          <h2 class="about__header">About Me</h2>
+          <ul class="link-list">
+            <li class="link-list__item">
+              <a
+                class="link-list__link"
+                href="https://www.github.com/henrykaus"
+                target="_blank"
+              >
+                <i class="icon fa-brands fa-github"></i>
+              </a>
+            </li>
+            <li class="link-list__item">
+              <a
+                class="link-list__link"
+                href="https://www.linkedin.com/in/henrykaus"
+                target="_blank"
+              >
+                <i class="icon fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </heading>
+        <p>
+          Hi! I’m Henry.<br /><br />
+
+          I’m a Senior Computer Science undergrad at Portland State slated to
+          graduate in March 2024. Through being admitted into the PSU
+          Cooperative Education Program (PCEP) internship, I have been given the
+          opportunity to intern across several Portland tech companies in
+          varying 6-month positions.<br /><br />
+
+          This includes a Quality Assurance Automation Engineering role at
+          Trimble Viewpoint where I created API tests in Cypress, front-end UI
+          tests in Selenium, and API performance tests in BlazeMeter along with
+          communicating any nightly failures across several teams. In my current
+          internship role, I have taken on a Software Development position with
+          Jama Software creating UI components in React.js for their
+          enterprise-facing application.<br /><br />
+
+          Through my studies and job experience, I have developed a drive for
+          problem-solving and a hunger to learn more. I consistently find myself
+          enveloped in whatever challenge rests in front of me, making use of
+          both my own abilities as well as those around me. I can’t wait to see
+          what’s to come, and please reach out to me as I'd love to share more.
+        </p>
+      </article>
+      <article id="work-experience">
+        <h2>Work Experience</h2>
+        <section class="work-card">
+          <p class="work-card__date">Jan – June 2023</p>
+          <div>
+            <header class="card__heading">
+              <h3 class="work-card__position">Software Engineer Intern</h3>
+              •
+              <a href="https://www.jamasoftware.com/" target="_blank">
+                Jama Software
+              </a>
+              <p class="work-card__location">
+                <i class="fa-regular fa-compass"></i> Portland, OR
+              </p>
+            </header>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Consequatur itaque aliquam, facilis aspernatur odio magni nisi
+              est, eligendi sequi voluptas rem eum sapiente cupiditate
+              architecto repudiandae doloribus natus soluta deserunt.
+            </p>
+            <div>
+              <p class="skill">HTML</p>
+              <p class="skill">JavaScript</p>
+              <p class="skill">React.JS</p>
+              <p class="skill">SASS</p>
+              <p class="skill">Git</p>
+              <p class="skill">Jira</p>
+            </div>
+          </div>
+        </section>
+      </article>
+      <article>
+        <h2>Projects</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error,
+          provident tempore. Itaque esse minus totam distinctio cumque, soluta
+          quae nulla explicabo animi recusandae vel repellat similique obcaecati
+          temporibus quos est.
+        </p>
+        <section class="project-container" id="projects">
+          <header class="card__heading">
+            <h3>Historical Weather Charter</h3>
+            <a
+              href="https://github.com/henrykaus/historical-weather-charter"
+              target="_blank"
+            >
+              link to project
+            </a>
+          </header>
+          <div class="card__contents">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+              obcaecati, quod inventore commodi veniam reprehenderit aliquid
+              laudantium est accusantium voluptates distinctio mollitia quaerat
+              nisi totam itaque! Perspiciatis nihil quos fugit.
+            </p>
+            <img
+              class="card__image"
+              src="img/Headshot.jpg"
+              alt=""
+              width="70"
+              height="70"
+            />
+          </div>
+        </section>
+      </article>
+      <article id="contact">
+        <h2>Reach Out</h2>
+        <div class="contact__content">
+          <p class="contact__description">
+            If you'd like to learn more about about click the button below.
+          </p>
+          <button class="contact__btn" id="open-form-btn">Open Form</button>
+        </div>
+        <form action="" class="contact__form" id="contact-form"></form>
+      </article>
+    </main>
+  </body>
 </html>

@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  --black: #000;
+  --code-font: 'Consolas', 'Courier New', Courier, monospace;
+}
+
+.site-container {
+  display: flex;
+  height: 100vh;
+  /* gap: 20px; */
+}
+
+.heading {
+  flex: 0 0 40%;
+  margin-left: 10px;
+}
+
+.nav__list {
+  padding: 0;
+}
+
+.nav__item {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.nav__link:hover {
+  text-transform: uppercase;
+}
+
+.content {
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+/* About Me */
+.about__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__header {
+  display: inline-block;
+}
+
+.link-list {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link-list__item {
+  display: inline;
+}
+
+.link-list__link {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.link-list__link:hover {
+  color: gray;
+}
+
+/* Work Experience */
+.work-card {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  column-gap: 10px;
+}
+
+.card__heading > * {
+  display: inline;
+  margin: 0;
+}
+
+.work-card__date {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.work-card__position {
+  font-size: 16px;
+}
+
+.work-card__location {
+  float: right;
+  font-family: var(--code-font);
+}
+
+.skill {
+  display: inline;
+  margin: 0;
+  background: lightgray;
+  padding: 5px;
+  border-radius: 12px;
+  line-height: 30px;
+  font-family: var(--code-font);
+  font-size: small;
+}
+
+/* Projects */
+.project-container {
+  background: lightgray;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.card__contents {
+  display: flex;
+}
+
+.card__image {
+  margin-top: 1em;
+}
+
+/* Contact Form */
+.contact__content {
+  text-align: center;
+}
+
+.contact__btn {
+  margin-bottom: 16px;
+}
+
+.contact__form {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 50% 50%;
+}
+
+.contact__reason-container,
+.input-submit {
+  grid-column-start: span 2;
+}
+
+.contact__label {
+  display: block;
+}
+
+.input-submit {
+  justify-self: center;
+}
+
+.input-text,
+.input-reason {
+  width: 100%;
+}
