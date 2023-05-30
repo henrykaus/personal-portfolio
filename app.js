@@ -14,7 +14,7 @@ $(document).ready(() => {
           $('<div>')
             .append(
               $('<label for="name-input">')
-                .text('Name:')
+                .text('Name')
                 .addClass('contact__label')
             )
             .append(
@@ -27,7 +27,7 @@ $(document).ready(() => {
           $('<div>')
             .append(
               $('<label for="email-input">')
-                .text('Email:')
+                .text('Email')
                 .addClass('contact__label')
             )
             .append(
@@ -41,7 +41,7 @@ $(document).ready(() => {
             .addClass('contact__reason-container')
             .append(
               $('<label for="reason-input">')
-                .text('Reason:')
+                .text('Reason')
                 .addClass('contact__label')
             )
             .append(

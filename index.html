@@ -15,9 +15,9 @@
   </head>
   <body class="site-container">
     <header class="heading">
-      <h1>Henry Kaus</h1>
+      <h1 class="site-name">Henry Kaus</h1>
       <p>A student, intern, and above all else a creative.</p>
-      <nav>
+      <nav class="site-nav">
         <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__link" href="#about-me">About Me</a>
@@ -35,7 +35,7 @@
       </nav>
     </header>
     <main class="content">
-      <article id="about-me">
+      <article class="site-article" id="about-me">
         <heading class="about__heading">
           <h2 class="about__header">About Me</h2>
           <ul class="link-list">
@@ -83,17 +83,19 @@
           what’s to come, and please reach out to me as I'd love to share more.
         </p>
       </article>
-      <article id="work-experience">
+      <article class="site-article" id="work-experience">
         <h2>Work Experience</h2>
         <section class="work-card">
           <p class="work-card__date">Jan – June 2023</p>
           <div>
             <header class="card__heading">
-              <h3 class="work-card__position">Software Engineer Intern</h3>
-              •
-              <a href="https://www.jamasoftware.com/" target="_blank">
-                Jama Software
-              </a>
+              <div>
+                <h3 class="work-card__position">Software Engineering Intern</h3>
+                •
+                <a href="https://www.jamasoftware.com/" target="_blank">
+                  Jama Software
+                </a>
+              </div>
               <p class="work-card__location">
                 <i class="fa-regular fa-compass"></i> Portland, OR
               </p>
@@ -114,8 +116,71 @@
             </div>
           </div>
         </section>
+        <section class="work-card">
+          <p class="work-card__date">July – December 2022</p>
+          <div>
+            <header class="card__heading">
+              <div>
+                <h3 class="work-card__position">
+                  Software QA Automation Intern
+                </h3>
+                •
+                <a href="https://www.viewpoint.com/" target="_blank">
+                  Trimble Viewpoint
+                </a>
+              </div>
+              <p class="work-card__location">
+                <i class="fa-regular fa-compass"></i> Portland, OR
+              </p>
+            </header>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Consequatur itaque aliquam, facilis aspernatur odio magni nisi
+              est, eligendi sequi voluptas rem eum sapiente cupiditate
+              architecto repudiandae doloribus natus soluta deserunt.
+            </p>
+            <div>
+              <p class="skill">Cypress</p>
+              <p class="skill">Selenium</p>
+              <p class="skill">JavaScript</p>
+              <p class="skill">C#</p>
+              <p class="skill">BlazeMeter</p>
+              <p class="skill">Azure DevOps</p>
+              <p class="skill">Git</p>
+            </div>
+          </div>
+        </section>
+        <section class="work-card">
+          <p class="work-card__date">August 2019 – January 2022</p>
+          <div>
+            <header class="card__heading">
+              <div>
+                <h3 class="work-card__position">Journalist</h3>
+                •
+                <a href="https://tigardlife.com/" target="_blank">
+                  Tigard And Tualatin Life
+                </a>
+              </div>
+              <p class="work-card__location">
+                <i class="fa-regular fa-compass"></i> Tigard, OR
+              </p>
+            </header>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Consequatur itaque aliquam, facilis aspernatur odio magni nisi
+              est, eligendi sequi voluptas rem eum sapiente cupiditate
+              architecto repudiandae doloribus natus soluta deserunt.
+            </p>
+            <div>
+              <p class="skill">Adobe Photoshop</p>
+              <p class="skill">Adobe Lightroom</p>
+              <p class="skill">Adobe InDesign</p>
+              <p class="skill">WordPress</p>
+            </div>
+          </div>
+        </section>
       </article>
-      <article>
+      <article class="site-article" id="projects">
         <h2>Projects</h2>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error,
@@ -123,9 +188,9 @@
           quae nulla explicabo animi recusandae vel repellat similique obcaecati
           temporibus quos est.
         </p>
-        <section class="project-container" id="projects">
+        <section class="project-container">
           <header class="card__heading">
-            <h3>Historical Weather Charter</h3>
+            <h3 class="project__name">Historical Weather Charter</h3>
             <a
               href="https://github.com/henrykaus/historical-weather-charter"
               target="_blank"
@@ -134,7 +199,7 @@
             </a>
           </header>
           <div class="card__contents">
-            <p>
+            <p class="project__description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
               obcaecati, quod inventore commodi veniam reprehenderit aliquid
               laudantium est accusantium voluptates distinctio mollitia quaerat
@@ -150,11 +215,11 @@
           </div>
         </section>
       </article>
-      <article id="contact">
+      <article class="site-article" id="contact">
         <h2>Reach Out</h2>
         <div class="contact__content">
           <p class="contact__description">
-            If you'd like to learn more about about click the button below.
+            If you'd like to get in contact, click the button below.
           </p>
           <button class="contact__btn" id="open-form-btn">Open Form</button>
         </div>
