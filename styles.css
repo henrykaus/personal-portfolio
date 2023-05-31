@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;600&family=Rubik:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;600&family=Rubik:wght@400;500;600&family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -10,20 +14,27 @@ body {
   margin: 0;
   --white: #ffffff;
   --lightgray: #e8e8e8;
+  --almostgray: #c7c7c7;
   --gray: #9e9e9e;
+  --mediumgray: #666666;
   --darkgray: #292929;
-  --black: #0d0d0d;
+  --black: #292929;
   --blue: #b5e2fa;
   --darkblue: #8ed5fa;
   --darkerblue: #3ab1f0;
   --lightred: #e8c8c8;
   --red: #fcbcb8;
   --darkred: #fa9791;
-  --code-font: 'Inconsolata', Consolas, 'Courier New', Courier, monospace;
-  --code-weight: 600;
+  --code-font: 'Roboto Mono', 'Inconsolata', Consolas, 'Courier New', Courier,
+    monospace;
+  /* --code-weight: 600; */
+  --code-weight: 400;
+  color: var(--black);
 }
 
-h1,
+h1 {
+  font-weight: 600;
+}
 h2,
 h3,
 h4,
@@ -42,7 +53,7 @@ textarea {
 
 .site-container {
   display: flex;
-  gap: 20px;
+  gap: 1em;
   margin: 0 1em 1em 1em;
   justify-content: space-evenly;
 }
@@ -55,10 +66,15 @@ textarea {
   top: 0;
   max-width: 100em;
   min-width: 13em;
+  flex: 0 1 20%;
 }
 
 .site-name {
-  font-size: 2.5em;
+  font-size: 3em;
+}
+
+.site-tagline {
+  color: var(--darkgray);
 }
 
 .site-nav {
@@ -78,14 +94,20 @@ textarea {
 .nav__link {
   text-decoration: none;
   color: var(--black);
+  padding: 0.25em;
+  display: inline-block;
 }
 
 .nav__link:hover {
-  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: var(--lightred);
+  box-shadow: 0px 0px 8px var(--lightred);
 }
 
 .content {
   max-width: 45em;
+  flex: 0 3 45%;
 }
 
 .site-article {
@@ -99,15 +121,27 @@ textarea {
   align-items: center;
 }
 
-.about__header {
+.about__heading > .header {
   display: inline-block;
+}
+
+.header {
+  position: relative;
+  padding-top: 0.5em;
+}
+
+.pound {
+  position: absolute;
+  left: -1.25em;
+  color: var(--almostgray);
+  font-weight: 400;
 }
 
 .link-list {
   display: inline;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0.5em 0 0 0;
 }
 
 .link-list__item {
@@ -139,7 +173,7 @@ textarea {
 /* Work Experience */
 .work-card {
   display: grid;
-  grid-template-columns: 0.25fr 0.75fr;
+  grid-template-columns: 0.21fr 0.79fr;
   column-gap: 10px;
   align-items: baseline;
   margin-bottom: 2em;
@@ -153,7 +187,8 @@ textarea {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  row-gap: 4px;
+  row-gap: 0.25em;
+  column-gap: 1em;
 }
 
 .work-card__date {
@@ -169,13 +204,14 @@ textarea {
 
 .work-card__location {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 5px;
   margin: 0;
-  color: var(--darkgray);
+  color: var(--mediumgray);
   font-family: var(--code-font);
-  font-weight: 500;
-  font-size: 17px;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.5px;
 }
 
 .skill {
@@ -183,11 +219,12 @@ textarea {
   margin: 0;
   background: var(--red);
   padding: 5px 8px;
-  border-radius: 11px;
-  line-height: 30px;
+  border-radius: 13px;
+  line-height: 35px;
   font-family: var(--code-font);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
+  letter-spacing: -0.5px;
   white-space: nowrap;
   box-shadow: 0px 2px 8px var(--lightred);
   -webkit-box-shadow: 0px 2px 8px var(--lightred);
@@ -273,7 +310,7 @@ textarea {
 .input-submit {
   background-color: var(--blue);
   border: none;
-  border-radius: 15px;
+  border-radius: 18px;
   padding: 8px 15px;
   font-size: 0.9em;
   font-weight: 500;
@@ -287,15 +324,15 @@ textarea {
 }
 
 .contact__btn {
-  border-radius: 7px;
+  border-radius: 9px;
 }
 
 .contact__btn--open {
-  background-color: var(--red);
+  background-color: var(--lightgray);
 }
 
 .contact__btn--open:hover {
-  background-color: var(--darkred);
+  background-color: var(--gray);
 }
 
 .contact__form {
@@ -340,15 +377,12 @@ textarea {
   .site-container {
     display: grid;
     grid-template-columns: 1fr;
+    margin-left: 2.5em;
   }
 
   .heading {
     position: static;
     padding-top: 2em;
-    width: 100%;
-  }
-
-  .content {
     width: 100%;
   }
 
@@ -362,5 +396,21 @@ textarea {
 
   .nav__item:not(:last-child) {
     margin-right: 15px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .site-article:first-of-type {
+    margin-top: 0;
+  }
+
+  .pound {
+    left: -1em;
+  }
+
+  .card__image {
+    display: none;
   }
 }

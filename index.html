@@ -16,20 +16,23 @@
   <body class="site-container">
     <header class="heading">
       <h1 class="site-name">Henry Kaus</h1>
-      <p>A student, an intern, and above all else a creative.</p>
+      <p class="site-tagline">
+        A student, an intern, a developer, and a creative just throwing darts at
+        a board and seeing what sticks.
+      </p>
       <nav class="site-nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link" href="#about-me">About Me</a>
+            <a class="nav__link" href="#about-me"># about me</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#work-experience">Work Experience</a>
+            <a class="nav__link" href="#work-experience"># work experience</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#projects">Projects</a>
+            <a class="nav__link" href="#projects"># projects</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#contact">Contact</a>
+            <a class="nav__link" href="#contact"># contact</a>
           </li>
         </ul>
       </nav>
@@ -37,7 +40,7 @@
     <main class="content">
       <article class="site-article" id="about-me">
         <heading class="about__heading">
-          <h2 class="about__header">About Me</h2>
+          <h2 class="header"><span class="pound">#</span>about me</h2>
           <ul class="link-list">
             <li class="link-list__item">
               <a
@@ -84,7 +87,7 @@
         </p>
       </article>
       <article class="site-article" id="work-experience">
-        <h2>Work Experience</h2>
+        <h2 class="header"><span class="pound">#</span>work experience</h2>
         <section class="work-card">
           <p class="work-card__date">Jan – June 2023</p>
           <div>
@@ -117,7 +120,7 @@
           </div>
         </section>
         <section class="work-card">
-          <p class="work-card__date">July – December 2022</p>
+          <p class="work-card__date">July – Dec 2022</p>
           <div>
             <header class="card__heading">
               <div>
@@ -151,7 +154,7 @@
           </div>
         </section>
         <section class="work-card">
-          <p class="work-card__date">August 2019 – January 2022</p>
+          <p class="work-card__date">2019 – 2022</p>
           <div>
             <header class="card__heading">
               <div>
@@ -181,7 +184,7 @@
         </section>
       </article>
       <article class="site-article" id="projects">
-        <h2>Projects</h2>
+        <h2 class="header"><span class="pound">#</span>projects</h2>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error,
           provident tempore. Itaque esse minus totam distinctio cumque, soluta
@@ -207,7 +210,15 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
                 obcaecati, quod inventore commodi veniam reprehenderit aliquid
                 laudantium est accusantium voluptates distinctio mollitia
-                quaerat nisi totam itaque! Perspiciatis nihil quos fugit.
+                quaerat nisi totam itaque! Perspiciatis nihil quos fugit.Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                obcaecati, quod inventore commodi veniam reprehenderit aliquid
+                laudantium est accusantium voluptates distinctio mollitia
+                quaerat nisi totam itaque! Perspiciatis nihil quos fugitLorem
+                ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                obcaecati, quod inventore commodi veniam reprehenderit aliquid
+                laudantium est accusantium voluptates distinctio mollitia
+                quaerat nisi totam itaque! Perspiciatis nihil quos fugit
               </p>
               <img
                 class="card__image"
@@ -265,10 +276,12 @@
         </div>
       </article>
       <article class="site-article" id="contact">
-        <h2>Reach Out</h2>
+        <h2 class="header"><span class="pound">#</span>reach out</h2>
         <div class="contact__content">
           <div class="contact__description">
-            <p>If you'd like to get in contact, click "Open Form".</p>
+            <p id="contact-instructions">
+              If you'd like to get in contact, click "Open Form".
+            </p>
             <button class="contact__btn" id="open-form-btn">Open Form</button>
           </div>
           <form action="" class="contact__form" id="contact-form"></form>

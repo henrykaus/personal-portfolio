@@ -1,13 +1,20 @@
 $(document).ready(() => {
+  const form = document.querySelector('#contact-form');
   let formIsOpen = false;
 
   $('#open-form-btn').on('click', (event) => {
     if (formIsOpen) {
       $('#open-form-btn').text('Open Form').removeClass('contact__btn--open');
+      $('#contact-instructions').text(
+        'If you\'d like to get in contact, click "Open Form".'
+      );
       // Delete all elements in form
       $('#contact-form').empty();
     } else {
       $('#open-form-btn').text('Close Form').addClass('contact__btn--open');
+      $('#contact-instructions').text(
+        'To get in contact, fill out the fields below and click "Submit".'
+      );
 
       // Add all elements of the form
       $('#contact-form')
@@ -56,24 +63,23 @@ $(document).ready(() => {
             'input-submit'
           )
         );
-
-      //Submit not working
-      $('#submit-input').on('submit', function (event) {
-        console.group('========= Form Submission =========');
-        console.log('Name:', $('#name-input').val());
-        console.log('Email:', $('#email-input').val());
-        console.log('Reason:', $('#reason-input').val());
-        console.groupEnd();
-        $('#open-form-btn').remove();
-        // $('#contact-form').empty();
-
-        // $('#contact-form').append(
-        //   $('<p>').text('Successfully submitted form!')
-        // );
-        event.preventDefault();
-        return false;
-      });
     }
     formIsOpen = !formIsOpen;
   });
+
+  form.onsubmit = (event) => {
+    console.group('========= Form Submission =========');
+    console.log('Name:', form.elements.name.value);
+    console.log('Email:', form.elements.email.value);
+    console.log('Reason For Contact:', form.elements.reason.value);
+    console.groupEnd();
+    form.reset();
+    event.preventDefault();
+    $('#contact-form').empty();
+    $('#contact-instructions').text(
+      'Your request has been submitted, talk to you soon!'
+    );
+    $('#open-form-btn').remove();
+    formIsOpen = false;
+  };
 });
