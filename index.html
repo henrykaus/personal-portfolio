@@ -16,7 +16,7 @@
   <body class="site-container">
     <header class="heading">
       <h1 class="site-name">Henry Kaus</h1>
-      <p>A student, intern, and above all else a creative.</p>
+      <p>A student, an intern, and above all else a creative.</p>
       <nav class="site-nav">
         <ul class="nav__list">
           <li class="nav__item">
@@ -44,6 +44,7 @@
                 class="link-list__link"
                 href="https://www.github.com/henrykaus"
                 target="_blank"
+                aria-label="Henry's GitHub link"
               >
                 <i class="icon fa-brands fa-github"></i>
               </a>
@@ -53,6 +54,7 @@
                 class="link-list__link"
                 href="https://www.linkedin.com/in/henrykaus"
                 target="_blank"
+                aria-label="Henry's LinkedIn link"
               >
                 <i class="icon fa-brands fa-linkedin"></i>
               </a>
@@ -60,22 +62,20 @@
           </ul>
         </heading>
         <p>
-          Hi! I’m Henry.<br /><br />
-
-          I’m a Senior Computer Science undergrad at Portland State slated to
-          graduate in March 2024. Through being admitted into the PSU
+          Hi, I’m Henry — a Computer Science undergrad at Portland State slated
+          to graduate in March 2024. Through being admitted into the PSU
           Cooperative Education Program (PCEP) internship, I have been given the
           opportunity to intern across several Portland tech companies in
-          varying 6-month positions.<br /><br />
-
+          varying 6-month positions.
+          <br /><br />
           This includes a Quality Assurance Automation Engineering role at
           Trimble Viewpoint where I created API tests in Cypress, front-end UI
           tests in Selenium, and API performance tests in BlazeMeter along with
           communicating any nightly failures across several teams. In my current
           internship role, I have taken on a Software Development position with
           Jama Software creating UI components in React.js for their
-          enterprise-facing application.<br /><br />
-
+          enterprise-facing application.
+          <br /><br />
           Through my studies and job experience, I have developed a drive for
           problem-solving and a hunger to learn more. I consistently find myself
           enveloped in whatever challenge rests in front of me, making use of
@@ -97,7 +97,7 @@
                 </a>
               </div>
               <p class="work-card__location">
-                <i class="fa-regular fa-compass"></i> Portland, OR
+                <i class="fa-solid fa-earth-americas"></i> Portland, OR
               </p>
             </header>
             <p>
@@ -130,7 +130,7 @@
                 </a>
               </div>
               <p class="work-card__location">
-                <i class="fa-regular fa-compass"></i> Portland, OR
+                <i class="fa-solid fa-earth-americas"></i> Portland, OR
               </p>
             </header>
             <p>
@@ -162,7 +162,7 @@
                 </a>
               </div>
               <p class="work-card__location">
-                <i class="fa-regular fa-compass"></i> Tigard, OR
+                <i class="fa-solid fa-earth-americas"></i> Tigard, OR
               </p>
             </header>
             <p>
@@ -188,42 +188,91 @@
           quae nulla explicabo animi recusandae vel repellat similique obcaecati
           temporibus quos est.
         </p>
-        <section class="project-container">
-          <header class="card__heading">
-            <h3 class="project__name">Historical Weather Charter</h3>
-            <a
-              href="https://github.com/henrykaus/historical-weather-charter"
-              target="_blank"
-            >
-              link to project
-            </a>
-          </header>
-          <div class="card__contents">
-            <p class="project__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-              obcaecati, quod inventore commodi veniam reprehenderit aliquid
-              laudantium est accusantium voluptates distinctio mollitia quaerat
-              nisi totam itaque! Perspiciatis nihil quos fugit.
-            </p>
-            <img
-              class="card__image"
-              src="img/Headshot.jpg"
-              alt=""
-              width="70"
-              height="70"
-            />
-          </div>
-        </section>
+        <div class="projects-container">
+          <section class="project">
+            <header class="card__heading">
+              <h3 class="project__name">
+                <a
+                  class="project__link"
+                  href="https://github.com/henrykaus/historical-weather-charter"
+                  target="_blank"
+                >
+                  Historical Weather Charter
+                  <i class="fa-solid fa-link fa-xs"></i>
+                </a>
+              </h3>
+            </header>
+            <div class="card__contents">
+              <p class="project__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                obcaecati, quod inventore commodi veniam reprehenderit aliquid
+                laudantium est accusantium voluptates distinctio mollitia
+                quaerat nisi totam itaque! Perspiciatis nihil quos fugit.
+              </p>
+              <img
+                class="card__image"
+                src="img/weather-charter.png"
+                alt="Screenshot of Historical Weather Charter project"
+                width="320"
+                height="180"
+              />
+            </div>
+          </section>
+          <section class="project">
+            <header class="card__heading">
+              <h3 class="project__name">
+                <a
+                  class="project__link"
+                  href="https://github.com/henrykaus/playoff-brackets"
+                  target="_blank"
+                >
+                  Playoff Bracket Generator
+                  <i class="fa-solid fa-link fa-xs"></i>
+                </a>
+              </h3>
+            </header>
+            <div class="card__contents">
+              <p class="project__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                obcaecati, quod inventore commodi veniam reprehenderit aliquid
+                laudantium est accusantium voluptates distinctio mollitia
+                quaerat nisi totam itaque! Perspiciatis nihil quos fugit.
+              </p>
+            </div>
+          </section>
+          <section class="project">
+            <header class="card__heading">
+              <h3 class="project__name">
+                <a
+                  class="project__link"
+                  href="https://github.com/henrykaus/monocular-depth-estimation"
+                  target="_blank"
+                >
+                  Monocular Depth Estimator
+                  <i class="fa-solid fa-link fa-xs"></i>
+                </a>
+              </h3>
+            </header>
+            <div class="card__contents">
+              <p class="project__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                obcaecati, quod inventore commodi veniam reprehenderit aliquid
+                laudantium est accusantium voluptates distinctio mollitia
+                quaerat nisi totam itaque! Perspiciatis nihil quos fugit.
+              </p>
+            </div>
+          </section>
+        </div>
       </article>
       <article class="site-article" id="contact">
         <h2>Reach Out</h2>
         <div class="contact__content">
-          <p class="contact__description">
-            If you'd like to get in contact, click the button below.
-          </p>
-          <button class="contact__btn" id="open-form-btn">Open Form</button>
+          <div class="contact__description">
+            <p>If you'd like to get in contact, click "Open Form".</p>
+            <button class="contact__btn" id="open-form-btn">Open Form</button>
+          </div>
+          <form action="" class="contact__form" id="contact-form"></form>
         </div>
-        <form action="" class="contact__form" id="contact-form"></form>
       </article>
     </main>
   </body>

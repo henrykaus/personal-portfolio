@@ -3,11 +3,12 @@ $(document).ready(() => {
 
   $('#open-form-btn').on('click', (event) => {
     if (formIsOpen) {
-      $('#open-form-btn').text('Open Form');
+      $('#open-form-btn').text('Open Form').removeClass('contact__btn--open');
       // Delete all elements in form
       $('#contact-form').empty();
     } else {
-      $('#open-form-btn').text('Close Form');
+      $('#open-form-btn').text('Close Form').addClass('contact__btn--open');
+
       // Add all elements of the form
       $('#contact-form')
         .append(
