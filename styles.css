@@ -145,16 +145,15 @@ textarea {
 }
 
 .link-list__item {
-  display: inline;
-}
-
-.link-list__item:not(:last-child) {
-  margin-right: 0.3em;
+  display: inline-block;
 }
 
 .link-list__link {
   text-decoration: none;
   color: var(--black);
+  display: inline-block;
+  padding: 0.35em;
+  border-radius: 5px;
 }
 
 .icon {
@@ -163,7 +162,8 @@ textarea {
 }
 
 .link-list__link:hover {
-  color: var(--darkblue);
+  background-color: var(--blue);
+  box-shadow: 0px 0px 8px var(--blue);
 }
 
 .about__description {
