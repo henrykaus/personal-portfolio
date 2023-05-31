@@ -299,6 +299,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1em;
 }
 
 .contact__description > * {
@@ -408,6 +409,14 @@ textarea {
 
   .pound {
     left: -1em;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project:first-of-type {
+    grid-column-start: span 1;
   }
 
   .card__image {
