@@ -2,15 +2,22 @@ $(document).ready(() => {
   const form = document.querySelector('#contact-form');
   let formIsOpen = false;
 
+  /**
+   * FORM: open-form-btn onClick
+   * Desc: On clicking the #open-form-btn, the form will either appear or
+   *       disappear depending on the "state" of the form.
+   */
   $('#open-form-btn').on('click', (event) => {
     if (formIsOpen) {
-      $('#open-form-btn').text('Open Form').removeClass('contact__btn--open');
+      // Reset instructions, button text and remove form elements
       $('#contact-instructions').text(
         'If you\'d like to get in contact, click "Open Form".'
       );
-      // Delete all elements in form
+      $('#open-form-btn').text('Open Form').removeClass('contact__btn--open');
       $('#contact-form').empty();
     } else {
+      // Change instructions for submitting a form, change button text, and
+      // create the form
       $('#open-form-btn').text('Close Form').addClass('contact__btn--open');
       $('#contact-instructions').text(
         'To get in contact, fill out the fields below and click "Submit".'
@@ -64,9 +71,17 @@ $(document).ready(() => {
           )
         );
     }
+
+    // Change open status of form when button is clicked
     formIsOpen = !formIsOpen;
   });
 
+  /**
+   * FORM: onSubmit
+   * Desc: On form submit, it displays all input information from the form into
+   *       the console, removed the form, removes the "Close Form" button, and
+   *       displays a "thank you" message.
+   */
   form.onsubmit = (event) => {
     console.group('========= Form Submission =========');
     console.log('Name:', form.elements.name.value);
