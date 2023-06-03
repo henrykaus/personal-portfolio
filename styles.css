@@ -318,6 +318,7 @@ textarea {
   background-color: var(--blue);
   border: none;
   border-radius: 18px;
+  color: var(--black);
   padding: 8px 15px;
   font-size: 0.9em;
   font-weight: 500;
