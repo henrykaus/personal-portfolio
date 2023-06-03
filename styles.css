@@ -450,4 +450,8 @@ textarea {
   .nav__item {
     font-size: 0.8em;
   }
+
+  .card__image {
+    display: none;
+  }
 }
