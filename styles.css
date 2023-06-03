@@ -448,7 +448,7 @@ textarea {
 
 @media (max-width: 524px) {
   .nav__item {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
 
   .card__image {
