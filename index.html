@@ -17,7 +17,7 @@
   <body class="site-container">
     <header class="heading">
       <h1 class="site-name">Henry Kaus</h1>
-      <p class="site-tagline">
+      <p class="description">
         A student, an intern, a developer, and a creative just throwing darts at
         a board and seeing what sticks.
       </p>
@@ -65,19 +65,19 @@
             </li>
           </ul>
         </heading>
-        <p>
-          Hi, I’m Henry — a Computer Science undergrad at Portland State slated
-          to graduate in March 2024. Through being admitted into the PSU
+        <p class="description">
+          Hi, I’m Henry — a Computer Science student at Portland State slated to
+          graduate in March 2024. Through being admitted into the PSU
           Cooperative Education Program (PCEP) internship, I have been given the
-          opportunity to intern across several Portland tech companies in
-          varying 6-month positions.
+          opportunity to work in several Portland tech companies through varying
+          6-month positions.
           <br /><br />
           This includes a Quality Assurance Automation Engineering role at
           Trimble Viewpoint where I created API tests in Cypress, front-end UI
           tests in Selenium, and API performance tests in BlazeMeter along with
           communicating any nightly failures across several teams. In my current
           internship role, I have taken on a Software Development position with
-          Jama Software creating UI components in React.js for their
+          Jama Software creating front-end components in React.js for their
           enterprise-facing application.
           <br /><br />
           Through my studies and job experience, I have developed a drive for
@@ -96,7 +96,11 @@
               <div>
                 <h3 class="work-card__position">Software Engineering Intern</h3>
                 •
-                <a href="https://www.jamasoftware.com/" target="_blank">
+                <a
+                  class="link"
+                  href="https://www.jamasoftware.com/"
+                  target="_blank"
+                >
                   Jama Software
                 </a>
               </div>
@@ -104,17 +108,19 @@
                 <i class="fa-solid fa-earth-americas"></i> Portland, OR
               </p>
             </header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Consequatur itaque aliquam, facilis aspernatur odio magni nisi
-              est, eligendi sequi voluptas rem eum sapiente cupiditate
-              architecto repudiandae doloribus natus soluta deserunt.
+            <p class="description">
+              In the 6-month stint, I primarily focused on creating, altering,
+              and amending responsive and web components in React.js used in a
+              cross-team shared library. I worked hand-in-hand with the product
+              team to address issues, perform desk reviews, and collaborate on
+              these highly used, interactive web components.
             </p>
             <div>
               <p class="skill">HTML</p>
               <p class="skill">JavaScript</p>
-              <p class="skill">React.JS</p>
+              <p class="skill">React.js</p>
               <p class="skill">SASS</p>
+              <p class="skill">Storybook</p>
               <p class="skill">Git</p>
               <p class="skill">Jira</p>
             </div>
@@ -129,7 +135,11 @@
                   Software QA Automation Intern
                 </h3>
                 •
-                <a href="https://www.viewpoint.com/" target="_blank">
+                <a
+                  class="link"
+                  href="https://www.viewpoint.com/"
+                  target="_blank"
+                >
                   Trimble Viewpoint
                 </a>
               </div>
@@ -137,11 +147,13 @@
                 <i class="fa-solid fa-earth-americas"></i> Portland, OR
               </p>
             </header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Consequatur itaque aliquam, facilis aspernatur odio magni nisi
-              est, eligendi sequi voluptas rem eum sapiente cupiditate
-              architecto repudiandae doloribus natus soluta deserunt.
+            <p class="description">
+              At Viewpoint, I primarily focused on writing automated testing
+              infrastructure. This included the creation of automated tests for
+              web-based UI applications in Selenium, as well as designed the
+              testing infrastructure for a new set of API nightly tests in
+              Cypress. This involved heavy communication with the dev. teams to
+              address nightly test failures.
             </p>
             <div>
               <p class="skill">Cypress</p>
@@ -161,7 +173,7 @@
               <div>
                 <h3 class="work-card__position">Journalist</h3>
                 •
-                <a href="https://tigardlife.com/" target="_blank">
+                <a class="link" href="https://tigardlife.com/" target="_blank">
                   Tigard and Tualatin Life
                 </a>
               </div>
@@ -169,11 +181,14 @@
                 <i class="fa-solid fa-earth-americas"></i> Tigard, OR
               </p>
             </header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Consequatur itaque aliquam, facilis aspernatur odio magni nisi
-              est, eligendi sequi voluptas rem eum sapiente cupiditate
-              architecto repudiandae doloribus natus soluta deserunt.
+            <p class="description">
+              At this publisher, I wrote and photographed 90+ sports and general
+              interest articles published to 90,000+ recipients. I managed my
+              time independently to meet strict deadlines while sorting
+              interview opportunities, writing sessions, editorial meetings, and
+              photoshoots among others. Edited and designed article layouts for
+              print using InDesign while managing the newspapers' online
+              websites in WordPress to publish and publicize articles.
             </p>
             <div>
               <p class="skill">Adobe Photoshop</p>
@@ -186,11 +201,9 @@
       </article>
       <article class="site-article" id="projects">
         <h2 class="header"><span class="pound">#</span>projects</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error,
-          provident tempore. Itaque esse minus totam distinctio cumque, soluta
-          quae nulla explicabo animi recusandae vel repellat similique obcaecati
-          temporibus quos est.
+        <p class="description">
+          Besides work in the field, I've spent my time both in and out of
+          school immersing myself in varying side projects.
         </p>
         <div class="projects-container">
           <section class="project">
@@ -207,19 +220,42 @@
               </h3>
             </header>
             <div class="card__contents">
-              <p class="project__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-                obcaecati, quod inventore commodi veniam reprehenderit aliquid
-                laudantium est accusantium voluptates distinctio mollitia
-                quaerat nisi totam itaque! Perspiciatis nihil quos fugit.Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Quidem
-                obcaecati, quod inventore commodi veniam reprehenderit aliquid
-                laudantium est accusantium voluptates distinctio mollitia
-                quaerat nisi totam itaque! Perspiciatis nihil quos fugitLorem
-                ipsum dolor sit amet consectetur adipisicing elit. Quidem
-                obcaecati, quod inventore commodi veniam reprehenderit aliquid
-                laudantium est accusantium voluptates distinctio mollitia
-                quaerat nisi totam itaque! Perspiciatis nihil quos fugit
+              <p class="description">
+                A web app that provides information in regards to historical
+                temperatures for almost any location in the world. Utilizing
+                free public <b>APIs</b>, the web app charts the past ~22 years
+                of high and low temperatures per month for any input location.
+                In addition, the web app displays a couple widgets with the
+                current month's min and max temp for the area as well as a
+                percent difference to the year prior. <br /><br />
+                In regards to the app's tech stack, it is primarily built on the
+                Python-based framework
+                <b>Flask</b> with some <b>HTML</b> and <b>CSS</b> and a tiny bit
+                of <b>JavaScript</b> to get a graph displaying. For weather
+                information, it takes text input for any location to hand to the
+                <b
+                  ><a
+                    class="link"
+                    href="https://nominatim.org/release-docs/latest/api/Overview/"
+                    target="_blank"
+                    >Nominatim API</a
+                  ></b
+                >
+                to do the language processing and return a set of latitude,
+                longitude coordinates, and then passes those coordinates to the
+                <b
+                  ><a
+                    class="link"
+                    href="https://open-meteo.com/en/docs/historical-weather-api"
+                    target="_blank"
+                    >Open-Meteo Historical Weather API</a
+                  ></b
+                >
+                to get daily temperature data for that location. The project's
+                <b>Docker</b> container was deployed using
+                <b>Google Cloud Platform</b> and uses a
+                <b>Google Datastore</b> backend to house all previously used
+                temperature information.
               </p>
               <img
                 class="card__image"
@@ -244,11 +280,17 @@
               </h3>
             </header>
             <div class="card__contents">
-              <p class="project__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-                obcaecati, quod inventore commodi veniam reprehenderit aliquid
-                laudantium est accusantium voluptates distinctio mollitia
-                quaerat nisi totam itaque! Perspiciatis nihil quos fugit.
+              <p class="description">
+                The playoff bracket generator is a terminal-based <b>C++</b> app
+                that can create, seed, and store playoff brackets for any
+                base-two number of teams. It has a simple user interface that
+                allows users to progress teams through a custom bracket. On
+                using the CLI, it has options for the removal or modification of
+                existing files in its simplified file system. <br /><br />
+                The inspiration for this project was that I wanted to automate
+                the creation fantasy-like brackets in a now-past soccer playoff
+                season, and was a good opportunity to become more familiar with
+                <b>Git</b> and <b>GitHub</b>.
               </p>
             </div>
           </section>
@@ -266,11 +308,15 @@
               </h3>
             </header>
             <div class="card__contents">
-              <p class="project__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-                obcaecati, quod inventore commodi veniam reprehenderit aliquid
-                laudantium est accusantium voluptates distinctio mollitia
-                quaerat nisi totam itaque! Perspiciatis nihil quos fugit.
+              <p class="description">
+                The monocular depth estimator was a research project that took
+                place in Winter 2023 for extracting depth information from a
+                single 2D RGB image given as little information as possible.
+                Using a pretrained <b>transfer learning</b> modal and the
+                <b>NYU Depth Dataset V2</b>, my team was able to script a
+                <b>Python Jupyter Notebook</b> that would create an accurate
+                depth-map for any given RGB image given a known min and max
+                distance in that image.
               </p>
             </div>
           </section>
