@@ -114,22 +114,29 @@ textarea {
 }
 
 .site-article {
-  margin-top: 4em;
+  padding-top: 1em;
+  margin-top: 3.5em;
+}
+
+.site-article:first-of-type {
+  margin-top: 4.5em;
 }
 
 .about__heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2em;
 }
 
 .about__heading > .header {
   display: inline-block;
+  margin-bottom: 0;
 }
 
 .header {
   position: relative;
-  padding-top: 0.5em;
+  margin-top: 0;
 }
 
 .pound {
@@ -143,7 +150,7 @@ textarea {
   display: inline;
   list-style-type: none;
   margin: 0;
-  padding: 0.5em 0 0 0;
+  padding: 0;
 }
 
 .link-list__item {
@@ -301,16 +308,20 @@ textarea {
   margin-bottom: 2em;
 }
 
-.contact__description {
+.contact__controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1em;
 }
 
-.contact__description > * {
+.contact__controls > * {
   display: inline-block;
   margin: 0;
+}
+
+.contact__controls > .description {
+  font-size: 0.9em;
 }
 
 .contact__btn,
