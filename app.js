@@ -14,7 +14,7 @@ $(document).ready(() => {
         "If you'd like to be in contact, click <b>Open Form</b>."
       );
       $('#open-form-btn').text('Open Form').removeClass('contact__btn--open');
-      $('#contact-form').empty();
+      $('#contact-form').empty().removeClass('contact__form--open');
     } else {
       // Change instructions for submitting a form, change button text, and
       // create the form
@@ -25,6 +25,7 @@ $(document).ready(() => {
 
       // Add all elements of the form
       $('#contact-form')
+        .addClass('contact__form--open')
         .append(
           $('<div>')
             .append(
@@ -90,7 +91,7 @@ $(document).ready(() => {
     console.groupEnd();
     form.reset();
     event.preventDefault();
-    $('#contact-form').empty();
+    $('#contact-form').empty().removeClass('contact__form--open');
     $('#contact-instructions').text(
       'Your request has been submitted, talk to you soon!'
     );

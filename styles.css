@@ -361,7 +361,7 @@ textarea {
   grid-template-columns: 0.5fr 0.5fr;
 }
 
-.contact__form:has(input) {
+.contact__form--open {
   margin-top: 2em;
 }
 
