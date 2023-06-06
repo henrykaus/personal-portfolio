@@ -18,12 +18,10 @@ body {
   --mediumgray: #666666;
   --darkgray: #4f4f4f;
   --black: #292929;
-  --lightblue: #b5e2fa;
-  --blue: #8ed5fa;
+  --blue: #b5e2fa;
   --darkblue: #076ba2;
   --lightred: #e8c8c8;
   --red: #fcbcb8;
-  --darkred: #fa9791;
   --code-font: 'Roboto Mono', Consolas, 'Courier New', Courier, monospace;
   color: var(--black);
   font-family: Rubik, sans-serif;
@@ -118,7 +116,7 @@ textarea {
   font-weight: 500;
 }
 
-/* GENERAL SITE STYLES */
+/***** GENERAL SITE STYLES *****/
 
 .site-content {
   flex: 0 3 45%;
@@ -154,7 +152,12 @@ textarea {
   color: var(--darkblue);
 }
 
-/* ABOUT ME STYLES */
+.link:hover {
+  font-weight: 600;
+}
+
+/***** ABOUT ME STYLES *****/
+
 #about-me.site-article {
   margin-top: 4.5em;
 }
@@ -195,11 +198,12 @@ textarea {
 }
 
 .link-list__link:hover {
-  background-color: var(--lightblue);
-  box-shadow: 0px 0px 8px var(--lightblue);
+  background-color: var(--blue);
+  box-shadow: 0px 0px 8px var(--blue);
 }
 
-/* WORK EXPERIENCE STYLES */
+/***** WORK EXPERIENCE STYLES *****/
+
 #work-experience > .article-header {
   margin-bottom: 1.5em;
 }
@@ -250,7 +254,7 @@ textarea {
   white-space: nowrap;
 }
 
-/* PROJECTS STYLES */
+/***** PROJECTS STYLES *****/
 .projects-container {
   display: grid;
   gap: 1em;
@@ -271,9 +275,9 @@ textarea {
 }
 
 .project:hover {
-  border-color: var(--lightblue);
-  box-shadow: 0px 2px 4px var(--lightblue);
-  -webkit-box-shadow: 0px 2px 4px var(--lightblue);
+  border-color: var(--blue);
+  box-shadow: 0px 2px 4px var(--blue);
+  -webkit-box-shadow: 0px 2px 4px var(--blue);
 }
 
 .project__name {
@@ -305,7 +309,7 @@ textarea {
   max-width: 100%;
 }
 
-/* CONTACT FROM STYLES */
+/***** CONTACT FORM STYLES *****/
 .contact__content {
   border: 2px solid var(--lightgray);
   border-radius: 12px;
@@ -327,7 +331,7 @@ textarea {
 
 .contact__btn,
 .input-submit {
-  background-color: var(--lightblue);
+  background-color: var(--blue);
   border: none;
   border-radius: 18px;
   color: var(--black);
@@ -395,7 +399,8 @@ textarea {
   justify-self: center;
 }
 
-/* MEDIA BREAK POINTS */
+/***** MEDIA BREAK POINTS STYLES *****/
+
 @media (max-width: 1200px) {
   /* At 1200px, change project layout to single-column */
   .projects-container {
@@ -408,7 +413,7 @@ textarea {
 }
 
 @media (max-width: 840px) {
-  /* Change entire layout to single-column */
+  /* Change entire site layout to single-column */
   .site-container {
     display: block;
     margin: 0 auto;
@@ -421,6 +426,7 @@ textarea {
     position: static;
   }
 
+  /* Make nav horizontal */
   .nav {
     margin: 0;
   }
