@@ -30,6 +30,7 @@ For this project to function, I directly used the following sources for fonts, i
 I also used several references for learning how to create features, as well as other portfolios for design inspiration:
  * Design Inspiration: https://brittanychiang.com/
  * Design Inspiration: https://mattfarley.ca/
+ * Design Inspiration: https://tamalsen.dev/
  * HTML and CSS Resource: https://www.w3schools.com/
  * HTML and CSS Resource: https://developer.mozilla.org/en-US/docs/Web
  * CSS Flex Resource: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
