@@ -22,6 +22,11 @@ To run and deploy this code using GitHub Pages...
 
 ## Outside Sources:
 
+For this project to function, I directly used the following sources for fonts, icons, library help, etc...
+ * Font Awesome (Icons): https://fontawesome.com/
+ * Google Fonts (Rubik and Roboto Mono Fonts): https://fonts.google.com/ 
+ * jQuery (HTML manipulation JavaScript library): https://jquery.com/
+
 In the creation of this site I used several references for learning how to create features, as well as other portfolios for design inspiration:
  * Design Inspiration: https://brittanychiang.com/
  * Design Inspiration: https://mattfarley.ca/
