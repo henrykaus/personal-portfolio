@@ -14,6 +14,7 @@
     ></script>
     <script defer src="app.js"></script>
   </head>
+
   <body class="site-container">
     <!-- Left-Side Header -->
     <header class="heading">
@@ -22,7 +23,7 @@
         A student, an intern, a developer, and a creative just throwing darts at
         a board and seeing what sticks.
       </p>
-      <nav class="site-nav">
+      <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__link" href="#about-me"># about me</a>
@@ -41,11 +42,11 @@
     </header>
 
     <!-- Right-side Main Content -->
-    <main class="content">
+    <main class="site-content">
       <!-- About Me Article -->
       <article class="site-article" id="about-me">
-        <header class="about__heading">
-          <h2 class="header"><span class="pound">#</span>about me</h2>
+        <header class="about__header">
+          <h2 class="article-header"><span class="pound">#</span>about me</h2>
           <ul class="link-list">
             <li class="link-list__item">
               <a
@@ -70,37 +71,38 @@
           </ul>
         </header>
         <p class="description">
-          Hi, I’m Henry — a Computer Science student at Portland State slated to
+          I'm Henry — a Computer Science student at Portland State slated to
           graduate in March 2024. Through being admitted into the PSU
           Cooperative Education Program (PCEP) internship, I have been given the
-          opportunity to work in several Portland tech companies through varying
-          6-month positions.
+          opportunity to work with several Portland-based tech companies through
+          varying 6-month positions.
           <br /><br />
           This includes a Quality Assurance Automation Engineering role at
           Trimble Viewpoint where I created API tests in Cypress, front-end UI
-          tests in Selenium, and API performance tests in BlazeMeter along with
-          communicating any nightly failures across several teams. In my current
-          internship role, I have taken on a Software Development position with
-          Jama Software creating front-end components in React.js for their
-          enterprise-facing application.
+          tests in Selenium, and API performance tests in BlazeMeter. In my
+          current internship role, I have taken on a Software Development
+          position with Jama Software creating front-end components in React.js
+          for their enterprise-facing application.
           <br /><br />
           Through my studies and job experience, I have developed a drive for
           problem-solving and a hunger to learn more. I consistently find myself
           enveloped in whatever challenge rests in front of me, making use of
-          both my own abilities as well as those around me. I can’t wait to see
-          what’s to come, and please reach out to me as I'd love to share more.
+          both my own abilities as well as those around me. I can't wait to see
+          what's to come, and please reach out to me as I'd love to share more.
         </p>
       </article>
 
       <!-- Work Experience Article -->
       <article class="site-article" id="work-experience">
-        <h2 class="header"><span class="pound">#</span>work experience</h2>
+        <h2 class="article-header">
+          <span class="pound">#</span>work experience
+        </h2>
 
         <!-- Jama Software Card -->
         <section class="work-card">
           <p class="work-card__date">Jan – June 2023</p>
           <div>
-            <header class="card__heading">
+            <header class="section-header">
               <div>
                 <h3 class="work-card__position">Software Engineering Intern</h3>
                 •
@@ -117,21 +119,19 @@
               </p>
             </header>
             <p class="description">
-              In the 6-month stint, I primarily focused on creating, altering,
-              and amending responsive and web components in React.js used in a
+              In this 6-month stint, I primarily focused on creating, altering,
+              and amending responsive web components in React.js used in a
               cross-team shared library. I worked hand-in-hand with the product
               team to address issues, perform desk reviews, and collaborate on
               these highly used, interactive web components.
             </p>
-            <div>
-              <p class="skill">HTML</p>
-              <p class="skill">JavaScript</p>
-              <p class="skill">React.js</p>
-              <p class="skill">SASS</p>
-              <p class="skill">Storybook</p>
-              <p class="skill">Git</p>
-              <p class="skill">Jira</p>
-            </div>
+            <p class="skill">HTML</p>
+            <p class="skill">JavaScript</p>
+            <p class="skill">React.js</p>
+            <p class="skill">SASS</p>
+            <p class="skill">Storybook</p>
+            <p class="skill">Git</p>
+            <p class="skill">Jira</p>
           </div>
         </section>
 
@@ -139,7 +139,7 @@
         <section class="work-card">
           <p class="work-card__date">July – Dec 2022</p>
           <div>
-            <header class="card__heading">
+            <header class="section-header">
               <div>
                 <h3 class="work-card__position">
                   Software QA Automation Intern
@@ -160,28 +160,26 @@
             <p class="description">
               At Viewpoint, I primarily focused on writing automated testing
               infrastructure. This included the creation of automated tests for
-              web-based UI applications in Selenium, as well as designed the
+              web-based UI applications in Selenium, as well as designing the
               testing infrastructure for a new set of API nightly tests in
               Cypress. This involved heavy communication with the dev. teams to
               address nightly test failures.
             </p>
-            <div>
-              <p class="skill">Cypress</p>
-              <p class="skill">Selenium</p>
-              <p class="skill">JavaScript</p>
-              <p class="skill">C#</p>
-              <p class="skill">BlazeMeter</p>
-              <p class="skill">Azure DevOps</p>
-              <p class="skill">Git</p>
-            </div>
+            <p class="skill">Cypress</p>
+            <p class="skill">Selenium</p>
+            <p class="skill">JavaScript</p>
+            <p class="skill">C#</p>
+            <p class="skill">BlazeMeter</p>
+            <p class="skill">Azure DevOps</p>
+            <p class="skill">Git</p>
           </div>
         </section>
 
         <!-- Tigard/Tualatin Life Card -->
         <section class="work-card">
-          <p class="work-card__date">2019 – 2022</p>
+          <p class="work-card__date">Aug 2019 – Jan 2022</p>
           <div>
-            <header class="card__heading">
+            <header class="section-header">
               <div>
                 <h3 class="work-card__position">Journalist</h3>
                 •
@@ -198,23 +196,21 @@
               interest articles published to 90,000+ recipients. I managed my
               time independently to meet strict deadlines while sorting
               interview opportunities, writing sessions, editorial meetings, and
-              photoshoots among others. Edited and designed article layouts for
-              print using InDesign while managing the newspapers' online
+              photoshoots among others. I edited and designed article layouts
+              for print using InDesign while managing the newspapers' online
               websites in WordPress to publish and publicize articles.
             </p>
-            <div>
-              <p class="skill">Adobe Photoshop</p>
-              <p class="skill">Adobe Lightroom</p>
-              <p class="skill">Adobe InDesign</p>
-              <p class="skill">WordPress</p>
-            </div>
+            <p class="skill">Adobe Photoshop</p>
+            <p class="skill">Adobe Lightroom</p>
+            <p class="skill">Adobe InDesign</p>
+            <p class="skill">WordPress</p>
           </div>
         </section>
       </article>
 
       <!-- Projects Article -->
       <article class="site-article" id="projects">
-        <h2 class="header"><span class="pound">#</span>projects</h2>
+        <h2 class="article-header"><span class="pound">#</span>projects</h2>
         <p class="description">
           Besides work in the field, I've spent my time both in and out of
           school immersing myself in varying side projects.
@@ -222,58 +218,64 @@
         <div class="projects-container">
           <!-- Historical Weather Charter Project -->
           <section class="project">
-            <header class="card__heading">
-              <h3 class="project__name">
-                <a
-                  class="project__link"
-                  href="https://github.com/henrykaus/historical-weather-charter"
-                  target="_blank"
-                >
-                  Historical Weather Charter
-                  <i class="fa-solid fa-link fa-xs"></i>
-                </a>
-              </h3>
-            </header>
-            <div class="card__contents">
+            <h3 class="project__name">
+              <a
+                class="project__link"
+                href="https://github.com/henrykaus/historical-weather-charter"
+                target="_blank"
+              >
+                Historical Weather Charter
+                <i class="fa-solid fa-link fa-xs"></i>
+              </a>
+            </h3>
+            <div class="project__contents">
               <p class="description">
                 A web app that provides information in regards to historical
                 temperatures for almost any location in the world. Utilizing
-                free public <b>APIs</b>, the web app charts the past ~22 years
-                of high and low temperatures per month for any input location.
-                In addition, the web app displays a couple widgets with the
-                current month's min and max temp for the area as well as a
-                percent difference to the year prior. <br /><br />
+                free public <span class="description--bold">APIs</span>, the web
+                app charts the past ~22 years of high and low temperatures per
+                month for any input location. In addition, the web app displays
+                a couple widgets for the current month's min and max temp for
+                the input location as well as a percent difference to the year
+                prior. <br /><br />
                 In regards to the app's tech stack, it is primarily built on the
                 Python-based framework
-                <b>Flask</b> with some <b>HTML</b> and <b>CSS</b> and a tiny bit
-                of <b>JavaScript</b> to get a graph displaying. For weather
-                information, it takes text input for any location to hand to the
-                <b
-                  ><a
+                <span class="description--bold">Flask</span> with some
+                <span class="description--bold">HTML</span> and
+                <span class="description--bold">CSS</span> and a tiny bit of
+                <span class="description--bold">JavaScript</span>. For weather
+                information, it asks for any location to hand to the
+                <span class="description--bold">
+                  <a
                     class="link"
                     href="https://nominatim.org/release-docs/latest/api/Overview/"
                     target="_blank"
-                    >Nominatim API</a
-                  ></b
-                >
-                to do the language processing and return a set of latitude,
-                longitude coordinates, and then passes those coordinates to the
-                <b
-                  ><a
+                  >
+                    Nominatim API
+                  </a>
+                </span>
+                to do the language processing while also returning a set of
+                latitude, longitude coordinates. These coords then get passed to
+                the
+                <span class="description--bold">
+                  <a
                     class="link"
                     href="https://open-meteo.com/en/docs/historical-weather-api"
                     target="_blank"
-                    >Open-Meteo Historical Weather API</a
-                  ></b
-                >
-                to get daily temperature data for that location. The project's
-                <b>Docker</b> container was deployed using
-                <b>Google Cloud Platform</b> and uses a
-                <b>Google Datastore</b> backend to house all previously used
-                temperature information.
+                  >
+                    Open-Meteo Historical Weather API
+                  </a>
+                </span>
+                for location-specific daily temperature data. The project's
+                <span class="description--bold">Docker</span> container was
+                deployed using
+                <span class="description--bold">Google Cloud Platform</span> and
+                uses a
+                <span class="description--bold">Google Datastore</span> back-end
+                to house all previously used temperature information.
               </p>
               <img
-                class="card__image"
+                class="project__image"
                 src="img/weather-charter.png"
                 alt="Screenshot of Historical Weather Charter project"
                 width="640"
@@ -284,58 +286,69 @@
 
           <!-- Playoff Bracket Generator Project -->
           <section class="project">
-            <header class="card__heading">
-              <h3 class="project__name">
-                <a
-                  class="project__link"
-                  href="https://github.com/henrykaus/playoff-brackets"
-                  target="_blank"
-                >
-                  Playoff Bracket Generator
-                  <i class="fa-solid fa-link fa-xs"></i>
-                </a>
-              </h3>
-            </header>
-            <div class="card__contents">
+            <h3 class="project__name">
+              <a
+                class="project__link"
+                href="https://github.com/henrykaus/playoff-brackets"
+                target="_blank"
+              >
+                Playoff Bracket Generator
+                <i class="fa-solid fa-link fa-xs"></i>
+              </a>
+            </h3>
+            <div class="project__contents">
               <p class="description">
-                The playoff bracket generator is a terminal-based <b>C++</b> app
-                that can create, seed, and store playoff brackets for any
-                base-two number of teams. It has a simple user interface that
-                allows users to progress teams through a custom bracket. On
-                using the CLI, it has options for the removal or modification of
-                existing files in its simplified file system. <br /><br />
-                The inspiration for this project was that I wanted to automate
-                the creation fantasy-like brackets in a now-past soccer playoff
-                season, and was a good opportunity to become more familiar with
-                <b>Git</b> and <b>GitHub</b>.
+                The playoff bracket generator is a terminal-based
+                <span class="description--bold">C++</span> app that can create,
+                seed, and store playoff brackets for any base-two number of
+                teams. It has a simple user interface that allows users to
+                progress teams through a custom bracket. On using the CLI, it
+                has options for the removal or modification of existing files in
+                its simplified file system. <br /><br />
+                The inspiration for this project was the desire to automate the
+                creation of fantasy-like brackets in a now-past soccer playoff
+                season, and this also served as a good opportunity to become
+                more familiar with
+                <span class="description--bold">Git</span> and
+                <span class="description--bold">GitHub</span>.
               </p>
             </div>
           </section>
 
           <!-- Monocular Depth Estimator Project -->
           <section class="project">
-            <header class="card__heading">
-              <h3 class="project__name">
-                <a
-                  class="project__link"
-                  href="https://github.com/henrykaus/monocular-depth-estimation"
-                  target="_blank"
-                >
-                  Monocular Depth Estimator
-                  <i class="fa-solid fa-link fa-xs"></i>
-                </a>
-              </h3>
-            </header>
-            <div class="card__contents">
+            <h3 class="project__name">
+              <a
+                class="project__link"
+                href="https://github.com/henrykaus/monocular-depth-estimation"
+                target="_blank"
+              >
+                Monocular Depth Estimator
+                <i class="fa-solid fa-link fa-xs"></i>
+              </a>
+            </h3>
+            <div class="project__contents">
               <p class="description">
-                The monocular depth estimator was a research project that took
+                The monocular depth estimator is a research project that took
                 place in Winter 2023 for extracting depth information from a
-                single 2D RGB image given as little information as possible.
-                Using a pretrained <b>transfer learning</b> modal and the
-                <b>NYU Depth Dataset V2</b>, my team was able to script a
-                <b>Python Jupyter Notebook</b> that would create an accurate
-                depth-map for any given RGB image given a known min and max
-                distance in that image.
+                single 2D RGB image on the basis that the program would be given
+                as little outside information as possible. Using a pretrained
+                <span class="description--bold">transfer learning</span> model
+                and the
+                <span class="description--bold">
+                  <a
+                    class="link"
+                    href="https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html"
+                    target="_blank"
+                  >
+                    NYU Depth Dataset V2
+                  </a>
+                </span>
+                , my team was able to script a
+                <span class="description--bold">Python Jupyter Notebook</span>
+                that would create an accurate depth-map for any given RGB image
+                as long as the script was given a known true-depth min and max
+                distance that lies within the image.
               </p>
             </div>
           </section>
@@ -344,11 +357,11 @@
 
       <!-- Contact Article -->
       <article class="site-article" id="contact">
-        <h2 class="header"><span class="pound">#</span>reach out</h2>
+        <h2 class="article-header"><span class="pound">#</span>reach out</h2>
         <div class="contact__content">
           <div class="contact__controls">
             <p id="contact-instructions" class="description">
-              If you'd like to be in contact, click <b>Open Form</b>.
+              If you'd like to be in contact, click 'Open Form'.
             </p>
             <button class="contact__btn" id="open-form-btn">Open Form</button>
           </div>

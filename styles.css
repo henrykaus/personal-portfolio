@@ -74,11 +74,15 @@ textarea {
   color: var(--darkgray);
 }
 
+.description--bold {
+  font-weight: 600;
+}
+
 .heading > .description {
   max-width: 475px;
 }
 
-.site-nav {
+.nav {
   margin-top: 3em;
 }
 
@@ -107,7 +111,7 @@ textarea {
 }
 
 /* About Me */
-.content {
+.site-content {
   max-width: 45em;
   flex: 0 3 45%;
 }
@@ -121,19 +125,19 @@ textarea {
   margin-top: 4.5em;
 }
 
-.about__heading {
+.about__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2em;
 }
 
-.about__heading > .header {
+.about__header > .article-header {
   display: inline-block;
   margin-bottom: 0;
 }
 
-.header {
+.article-header {
   position: relative;
   margin-top: 0;
 }
@@ -177,7 +181,7 @@ textarea {
 /* Work Experience */
 .work-card {
   display: grid;
-  grid-template-columns: 0.21fr 0.79fr;
+  grid-template-columns: 0.22fr 0.78fr;
   column-gap: 10px;
   align-items: baseline;
   margin-bottom: 2em;
@@ -187,7 +191,7 @@ textarea {
   margin-top: 2.25em;
 }
 
-.card__heading {
+.section-header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -286,12 +290,12 @@ textarea {
   color: var(--darkblue);
 }
 
-.card__contents > .description {
+.project__contents > .description {
   font-size: 0.9em;
   margin-bottom: 0;
 }
 
-.card__image {
+.project__image {
   display: block;
   margin: 1em auto 0.5em auto;
   border-radius: 5px;
@@ -416,11 +420,11 @@ textarea {
     width: 100%;
   }
 
-  .about__heading > .header {
+  .about__header > .article-header {
     margin-top: 0;
   }
 
-  .site-nav {
+  .nav {
     margin: 0;
   }
 
@@ -452,7 +456,7 @@ textarea {
     -webkit-box-shadow: 0px 0px 8px var(--black);
   }
 
-  .content {
+  .site-content {
     width: 100%;
   }
 

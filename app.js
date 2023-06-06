@@ -10,8 +10,8 @@ $(document).ready(() => {
   $('#open-form-btn').on('click', (event) => {
     if (formIsOpen) {
       // Reset instructions, button text and remove form elements
-      $('#contact-instructions').html(
-        "If you'd like to be in contact, click <b>Open Form</b>."
+      $('#contact-instructions').text(
+        "If you'd like to be in contact, click 'Open Form'."
       );
       $('#open-form-btn').text('Open Form').removeClass('contact__btn--open');
       $('#contact-form').empty().removeClass('contact__form--open');
@@ -19,8 +19,8 @@ $(document).ready(() => {
       // Change instructions for submitting a form, change button text, and
       // create the form
       $('#open-form-btn').text('Close Form').addClass('contact__btn--open');
-      $('#contact-instructions').html(
-        'To get in contact, fill in your info below and click <b>Submit</b>.'
+      $('#contact-instructions').text(
+        "To get in contact, fill in your info below and click 'Submit'."
       );
 
       // Add all elements of the form
