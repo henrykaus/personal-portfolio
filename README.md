@@ -27,7 +27,7 @@ For this project to function, I directly used the following sources for fonts, i
  * Google Fonts (Rubik and Roboto Mono Fonts): https://fonts.google.com/ 
  * jQuery (HTML manipulation JavaScript library): https://jquery.com/
 
-In the creation of this site I used several references for learning how to create features, as well as other portfolios for design inspiration:
+I also used several references for learning how to create features, as well as other portfolios for design inspiration:
  * Design Inspiration: https://brittanychiang.com/
  * Design Inspiration: https://mattfarley.ca/
  * HTML and CSS Resource: https://www.w3schools.com/
