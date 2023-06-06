@@ -1,3 +1,4 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&family=Roboto+Mono:wght@400;600&display=swap');
 
 * {
@@ -5,6 +6,7 @@
 }
 
 html {
+  /* Gives smooth href jumps on page */
   scroll-behavior: smooth;
 }
 
@@ -26,9 +28,11 @@ body {
   color: var(--black);
   font-family: Rubik, sans-serif;
   font-weight: 400;
+
   margin: 0;
 }
 
+/* All headers require at least a font-weight of 500 for this site */
 h1,
 h2,
 h3,
@@ -38,6 +42,7 @@ h6 {
   font-weight: 500;
 }
 
+/* All buttons and inputs should have the Rubik font-family */
 button,
 input[type='text'],
 input[type='email'],
@@ -46,38 +51,43 @@ textarea {
   font-family: Rubik, sans-serif;
 }
 
-/* Left-Side Header */
+/* LEFT-SIDE HEADER */
 .site-container {
   display: flex;
   gap: 1em;
-  margin: 0 1em 1em 1em;
   justify-content: space-evenly;
+  margin: 0 1em 1em 1em;
 }
 
 .heading {
-  padding-top: 4em;
-  position: sticky;
-  position: -webkit-sticky;
   align-self: flex-start;
-  top: 0;
+  flex: 0 1 28%;
   max-width: 100em;
-  min-width: 13em;
-  flex: 0 1 20%;
+  min-width: 19em;
+  padding-top: 5.5em;
+
+  /* Allows heading to be constant on screen */
+  position: sticky;
+  top: 0;
 }
 
 .site-name {
   font-size: 3em;
   font-weight: 600;
+  margin-top: 0;
 }
 
+/* Class used for any regular text */
 .description {
   color: var(--darkgray);
 }
 
+/* Class used for keywords primarily in text */
 .description--bold {
   font-weight: 600;
 }
 
+/* Tag line of page */
 .heading > .description {
   max-width: 475px;
 }
@@ -92,63 +102,75 @@ textarea {
 
 .nav__item {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
 .nav__link {
-  text-decoration: none;
   color: var(--black);
-  padding: 0.25em;
   display: inline-block;
+  padding: 0.25em;
+  text-decoration: none;
 }
 
 .nav__link:hover {
-  font-weight: 500;
-  border-radius: 5px;
   background-color: var(--lightred);
+  border-radius: 5px;
   box-shadow: 0px 0px 8px var(--lightred);
+  font-weight: 500;
 }
 
-/* About Me */
+/* GENERAL SITE STYLES */
+
 .site-content {
-  max-width: 45em;
   flex: 0 3 45%;
+  max-width: 45em;
 }
 
 .site-article {
-  padding-top: 1em;
   margin-top: 3.5em;
+  padding-top: 1em;
 }
 
-.site-article:first-of-type {
+.article-header {
+  margin-top: 0;
+  position: relative;
+}
+
+.pound {
+  color: var(--mediumgray);
+  font-weight: 400;
+  left: -1.25em;
+  position: absolute;
+}
+
+.section-header {
+  column-gap: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 0.25em;
+}
+
+.link {
+  color: var(--darkblue);
+}
+
+/* ABOUT ME STYLES */
+#about-me.site-article {
   margin-top: 4.5em;
 }
 
 .about__header {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 2em;
 }
 
 .about__header > .article-header {
-  display: inline-block;
   margin-bottom: 0;
 }
 
-.article-header {
-  position: relative;
-  margin-top: 0;
-}
-
-.pound {
-  position: absolute;
-  left: -1.25em;
-  color: var(--mediumgray);
-  font-weight: 400;
-}
-
+/* External Platform Links */
 .link-list {
   display: inline;
   list-style-type: none;
@@ -161,11 +183,10 @@ textarea {
 }
 
 .link-list__link {
-  text-decoration: none;
+  border-radius: 5px;
   color: var(--black);
   display: inline-block;
   padding: 0.35em;
-  border-radius: 5px;
 }
 
 .icon {
@@ -178,25 +199,17 @@ textarea {
   box-shadow: 0px 0px 8px var(--lightblue);
 }
 
-/* Work Experience */
+/* WORK EXPERIENCE STYLES */
+#work-experience > .article-header {
+  margin-bottom: 1.5em;
+}
+
 .work-card {
+  align-items: baseline;
+  column-gap: 0.7em;
   display: grid;
   grid-template-columns: 0.22fr 0.78fr;
-  column-gap: 10px;
-  align-items: baseline;
   margin-bottom: 2em;
-}
-
-.work-card:first-of-type {
-  margin-top: 2.25em;
-}
-
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  row-gap: 0.25em;
-  column-gap: 1em;
 }
 
 .work-card__date {
@@ -205,25 +218,17 @@ textarea {
 }
 
 .work-card__position {
-  margin: 0;
   display: inline;
   font-size: 16px;
 }
 
-.link {
-  color: var(--darkblue);
-}
-
 .work-card__location {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin: 0;
   color: var(--mediumgray);
   font-family: var(--code-font);
-  font-weight: 400;
   font-size: 14px;
+  font-weight: 400;
   letter-spacing: -0.5px;
+  margin: 0;
 }
 
 .work-card .description {
@@ -231,39 +236,34 @@ textarea {
 }
 
 .skill {
-  display: inline;
-  margin: 0;
   background: var(--red);
-  padding: 5px 8px;
   border-radius: 13px;
-  line-height: 35px;
-  font-family: var(--code-font);
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: -0.5px;
-  white-space: nowrap;
   box-shadow: 0px 2px 8px var(--lightred);
   -webkit-box-shadow: 0px 2px 8px var(--lightred);
+  display: inline-block;
+  font-family: var(--code-font);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin: 0 0.1em 0.6em 0;
+  padding: 5px 8px;
+  white-space: nowrap;
 }
 
-.skill:not(:last-child) {
-  margin-right: 4px;
-}
-
-/* Projects */
+/* PROJECTS STYLES */
 .projects-container {
   display: grid;
-  grid-template-columns: 0.5fr 0.5fr;
   gap: 1em;
+  grid-template-columns: 0.5fr 0.5fr;
   margin-top: 1.5em;
 }
 
 .project {
-  padding: 1em;
   border: 2px solid var(--lightgray);
   border-radius: 12px;
   box-shadow: 0px 2px 4px var(--lightgray);
   -webkit-box-shadow: 0px 2px 4px var(--lightgray);
+  padding: 1em 1em 1.5em 1em;
 }
 
 .project:first-of-type {
@@ -271,7 +271,7 @@ textarea {
 }
 
 .project:hover {
-  border: 2px solid var(--lightblue);
+  border-color: var(--lightblue);
   box-shadow: 0px 2px 4px var(--lightblue);
   -webkit-box-shadow: 0px 2px 4px var(--lightblue);
 }
@@ -281,13 +281,13 @@ textarea {
 }
 
 .project__link {
-  text-decoration: none;
   color: var(--black);
+  text-decoration: none;
 }
 
 .project__link:hover {
-  text-decoration: underline;
   color: var(--darkblue);
+  text-decoration: underline;
 }
 
 .project__contents > .description {
@@ -296,37 +296,33 @@ textarea {
 }
 
 .project__image {
-  display: block;
-  margin: 1em auto 0.5em auto;
   border-radius: 5px;
-  max-width: 100%;
-  height: auto;
   box-shadow: -6px 6px 14px var(--gray);
   -webkit-box-shadow: -6px 6px 14px var(--gray);
+  display: block;
+  height: auto;
+  margin: 1.5em auto 0 auto;
+  max-width: 100%;
 }
 
-/* Contact Form */
+/* CONTACT FROM STYLES */
 .contact__content {
   border: 2px solid var(--lightgray);
-  padding: 1em;
   border-radius: 12px;
   margin-bottom: 2em;
+  padding: 1em;
 }
 
 .contact__controls {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 1em;
-}
-
-.contact__controls > * {
-  display: inline-block;
-  margin: 0;
+  display: flex;
+  column-gap: 0.75em;
+  justify-content: space-between;
 }
 
 .contact__controls > .description {
   font-size: 0.9em;
+  margin: 0;
 }
 
 .contact__btn,
@@ -335,20 +331,21 @@ textarea {
   border: none;
   border-radius: 18px;
   color: var(--black);
-  padding: 8px 15px;
   font-size: 0.9em;
   font-weight: 500;
+  padding: 8px 16px;
 }
 
 .contact__btn:hover,
 .input-submit:hover {
+  /* Extra visual feedback that the btns are clickable */
   background-color: var(--darkblue);
-  cursor: pointer;
   color: var(--white);
+  cursor: pointer;
 }
 
 .contact__btn {
-  border-radius: 9px;
+  border-radius: 8px;
 }
 
 .contact__btn--open {
@@ -361,12 +358,14 @@ textarea {
 
 .contact__form {
   display: grid;
-  gap: 10px;
+  gap: 0.7em;
   grid-template-columns: 0.5fr 0.5fr;
 }
 
 .contact__form--open {
-  margin-top: 2em;
+  border-top: 2px solid var(--lightgray);
+  margin-top: 1.5em;
+  padding-top: 1.5em;
 }
 
 .contact__reason-container,
@@ -376,27 +375,29 @@ textarea {
 
 .contact__label {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 0.3em;
+}
+
+.input-text,
+.input-reason {
+  border: 2px solid var(--almostgray);
+  border-radius: 3px;
+  padding: 0.4em 0.5em;
+  width: 100%;
+}
+
+.input-text:focus,
+.input-reason:focus {
+  outline-color: var(--darkblue);
 }
 
 .input-submit {
   justify-self: center;
 }
 
-.input-text,
-.input-reason {
-  width: 100%;
-  border: 2px solid var(--almostgray);
-  border-radius: 3px;
-  padding: 5px 7px;
-}
-
-.input-text:focus,
-.input-reason:focus {
-  outline-color: var(--blue);
-}
-
+/* MEDIA BREAK POINTS */
 @media (max-width: 1200px) {
+  /* At 1200px, change project layout to single-column */
   .projects-container {
     grid-template-columns: 1fr;
   }
@@ -407,21 +408,17 @@ textarea {
 }
 
 @media (max-width: 840px) {
+  /* Change entire layout to single-column */
   .site-container {
     display: block;
     margin: 0 auto;
-    padding: 0 2em 0 2.5em;
     max-width: 650px;
+    padding: 0 2em 0 2.4em;
   }
 
   .heading {
+    padding-top: 4.5em;
     position: static;
-    padding-top: 2em;
-    width: 100%;
-  }
-
-  .about__header > .article-header {
-    margin-top: 0;
   }
 
   .nav {
@@ -429,25 +426,21 @@ textarea {
   }
 
   .nav__list {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2em;
-    margin-bottom: 3em;
     background-color: var(--mediumgray);
+    border-radius: 5px;
     box-shadow: 0px 0px 8px var(--mediumgray);
     -webkit-box-shadow: 0px 0px 8px var(--mediumgray);
-    border-radius: 5px;
-    padding: 0 0.3em;
-  }
-
-  .nav__item {
-    font-size: 1em;
-    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3em;
+    margin-top: 2em;
   }
 
   .nav__link {
     color: var(--white);
     font-weight: 500;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 
   .nav__link:hover {
@@ -456,11 +449,7 @@ textarea {
     -webkit-box-shadow: 0px 0px 8px var(--black);
   }
 
-  .site-content {
-    width: 100%;
-  }
-
-  .site-article:first-of-type {
+  #about-me.site-article {
     margin-top: 0;
   }
 
@@ -469,17 +458,15 @@ textarea {
   }
 }
 
-@media (max-width: 524px) {
+@media (max-width: 540px) {
+  /* Shrink size of nav at 540px */
   .nav__list {
     margin-bottom: 2em;
     margin-top: 1.5em;
   }
-  .nav__item {
-    font-size: 0.7em;
-  }
 
   .nav__link {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    font-size: 0.68em;
+    padding: 0.5em;
   }
 }
