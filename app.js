@@ -1,11 +1,10 @@
 $(document).ready(() => {
-  const form = document.querySelector('#contact-form');
-  let formIsOpen = false;
+  let formIsOpen = false; // Form is closed when page opens
 
   /**
    * FORM: open-form-btn onClick
    * Desc: On clicking the #open-form-btn, the form will either appear or
-   *       disappear depending on the "state" of the form.
+   *       disappear depending on the state (formIsOpen) of the form.
    */
   $('#open-form-btn').on('click', (event) => {
     if (formIsOpen) {
@@ -27,49 +26,75 @@ $(document).ready(() => {
       $('#contact-form')
         .addClass('contact__form--open')
         .append(
+          // Name label and input
           $('<div>')
             .append(
-              $('<label for="name-input">')
+              $('<label>')
+                .attr('for', 'name-input')
                 .text('Name')
                 .addClass('contact__label')
             )
             .append(
-              $(
-                '<input id="name-input" type="text" name="name" required>'
-              ).addClass('input-text')
+              $('<input>')
+                .attr({
+                  id: 'name-input',
+                  type: 'text',
+                  name: 'name',
+                  required: true,
+                })
+                .addClass('input-text')
             )
         )
         .append(
+          // Email label and input
           $('<div>')
             .append(
-              $('<label for="email-input">')
+              $('<label>')
+                .attr('for', 'email-input')
                 .text('Email')
                 .addClass('contact__label')
             )
             .append(
-              $(
-                '<input id="email-input" type="email" name="email" required>'
-              ).addClass('input-text')
+              $('<input>')
+                .attr({
+                  id: 'email-input',
+                  type: 'email',
+                  name: 'email',
+                  required: true,
+                })
+                .addClass('input-text')
             )
         )
         .append(
+          // Reason for contact label and input
           $('<div>')
             .addClass('contact__reason-container')
             .append(
-              $('<label for="reason-input">')
+              $('<label>')
+                .attr('for', 'reason-input')
                 .text('Reason')
                 .addClass('contact__label')
             )
             .append(
-              $(
-                '<textarea id="reason-input" rows="7" name="reason" required>'
-              ).addClass('input-reason')
+              $('<textarea>')
+                .attr({
+                  id: 'reason-input',
+                  rows: '7',
+                  name: 'reason',
+                  required: true,
+                })
+                .addClass('input-reason')
             )
         )
         .append(
-          $('<input id="submit-input" type="submit" value="Submit">').addClass(
-            'input-submit'
-          )
+          // Submit button
+          $('<input>')
+            .attr({
+              id: 'submit-input',
+              type: 'submit',
+              value: 'Submit',
+            })
+            .addClass('input-submit')
         );
     }
 
@@ -83,19 +108,22 @@ $(document).ready(() => {
    *       the console, removed the form, removes the "Close Form" button, and
    *       displays a "thank you" message.
    */
+  const form = document.querySelector('#contact-form');
   form.onsubmit = (event) => {
     console.group('========= Form Submission =========');
     console.log('Name:', form.elements.name.value);
     console.log('Email:', form.elements.email.value);
     console.log('Reason For Contact:', form.elements.reason.value);
     console.groupEnd();
-    form.reset();
-    event.preventDefault();
+
     $('#contact-form').empty().removeClass('contact__form--open');
+
     $('#contact-instructions').text(
       'Your request has been submitted, talk to you soon!'
     );
     $('#open-form-btn').remove();
+
     formIsOpen = false;
+    event.preventDefault();
   };
 });
