@@ -61,7 +61,7 @@ textarea {
   align-self: flex-start;
   flex: 0 1 28%;
   max-width: 100em;
-  min-width: 19em;
+  min-width: 19.2em;
   padding-top: 5.5em;
 
   /* Allows heading to be constant on screen */
@@ -386,6 +386,7 @@ textarea {
 .input-reason {
   border: 2px solid var(--almostgray);
   border-radius: 3px;
+  font-size: 0.9em;
   padding: 0.4em 0.5em;
   width: 100%;
 }
