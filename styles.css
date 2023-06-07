@@ -58,6 +58,7 @@ textarea {
 }
 
 .heading {
+  align-self: flex-start;
   flex: 0 1 28%;
   max-width: 100em;
   min-width: 19.2em;
