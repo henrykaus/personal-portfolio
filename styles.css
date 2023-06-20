@@ -333,7 +333,7 @@ textarea {
   justify-content: space-between;
 }
 
-.contact__controls > .description {
+.contact__content .description {
   font-size: 0.9em;
   margin: 0;
 }
@@ -381,6 +381,17 @@ textarea {
   padding-top: 1.5em;
 }
 
+.contact__form__warning {
+  background-color: var(--red);
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 500;
+  grid-column: span 2;
+  margin: 0 0 0.7em 0;
+  padding: 0.4em 0;
+  text-align: center;
+}
+
 .contact__reason-container,
 .input-submit {
   grid-column-start: span 2;
@@ -395,6 +406,7 @@ textarea {
 .input-reason {
   border: 2px solid var(--almostgray);
   border-radius: 3px;
+  color: var(--black);
   font-size: 0.9em;
   padding: 0.4em 0.5em;
   width: 100%;

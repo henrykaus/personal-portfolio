@@ -26,6 +26,11 @@ $(document).ready(() => {
       $('#contact-form')
         .addClass('contact__form--open')
         .append(
+          $('<p>')
+            .text('WARNING: This form is purely decorative.')
+            .addClass('contact__form__warning')
+        )
+        .append(
           // Name label and input
           $('<div>')
             .append(
