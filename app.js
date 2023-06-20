@@ -27,7 +27,7 @@ $(document).ready(() => {
         .addClass('contact__form--open')
         .append(
           $('<p>')
-            .text('WARNING: This form is purely decorative.')
+            .text('WARNING: This form is purely decorative')
             .addClass('contact__form__warning')
         )
         .append(
