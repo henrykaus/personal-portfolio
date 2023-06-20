@@ -239,19 +239,25 @@ textarea {
   font-size: 0.9em;
 }
 
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 0.4em;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .skill {
   background: var(--red);
   border-radius: 13px;
   box-shadow: 0px 2px 8px var(--lightred);
   -webkit-box-shadow: 0px 2px 8px var(--lightred);
-  display: inline-block;
   font-family: var(--code-font);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: -0.5px;
-  margin: 0 0.1em 0.6em 0;
   padding: 5px 8px;
-  white-space: nowrap;
 }
 
 /***** PROJECTS STYLES *****/
@@ -296,6 +302,9 @@ textarea {
 
 .project__contents > .description {
   font-size: 0.9em;
+}
+
+.project__contents > .description:last-of-type {
   margin-bottom: 0;
 }
 
