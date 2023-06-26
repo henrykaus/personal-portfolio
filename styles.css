@@ -318,6 +318,14 @@ textarea {
   max-width: 100%;
 }
 
+.link > .project__image {
+  transition: transform 80ms linear;
+}
+.link > .project__image:hover {
+  transform: scale(1.05);
+  transition: transform 100ms linear;
+}
+
 /***** CONTACT FORM STYLES *****/
 .contact__content {
   border: 2px solid var(--lightgray);
