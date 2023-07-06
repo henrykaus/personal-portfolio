@@ -54,7 +54,7 @@ textarea {
   display: flex;
   gap: 1em;
   justify-content: space-evenly;
-  margin: 0 1em 1em 1em;
+  margin: 0 1em;
 }
 
 .heading {
@@ -427,6 +427,15 @@ textarea {
 
 .input-submit {
   justify-self: center;
+}
+
+/***** FOOTER STYLES *****/
+
+.copyright {
+  color: var(--mediumgray);
+  font-size: 0.8em;
+  margin-bottom: 1.5em;
+  text-align: center;
 }
 
 /***** MEDIA BREAK POINTS STYLES *****/
