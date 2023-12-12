@@ -159,7 +159,7 @@ textarea {
 /***** ABOUT ME STYLES *****/
 
 #about-me.site-article {
-  margin-top: 4.5em;
+  margin-top: 4.8em;
 }
 
 .about__header {
@@ -175,20 +175,19 @@ textarea {
 
 /* External Platform Links */
 .link-list {
-  display: inline;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 .link-list__item {
-  display: inline-block;
+  display: inline;
 }
 
 .link-list__link {
   border-radius: 5px;
   color: var(--black);
-  display: inline-block;
+  display: inline-flex;
   padding: 0.35em;
   transition: 0.2s ease-in-out;
 }
