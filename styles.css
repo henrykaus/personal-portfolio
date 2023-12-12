@@ -229,10 +229,13 @@ textarea {
 }
 
 .work-card__location {
+  align-items: center;
   color: var(--mediumgray);
+  display: flex;
   font-family: var(--code-font);
   font-size: 0.85em;
   font-weight: 400;
+  gap: 0.5em;
   letter-spacing: -0.5px;
   margin: 0;
 }
