@@ -60,7 +60,6 @@ textarea {
 .heading {
   align-self: flex-start;
   flex: 0 1 28%;
-  max-width: 100em;
   min-width: 19.2em;
   padding-top: 5.5em;
 
@@ -122,7 +121,6 @@ textarea {
 
 .site-content {
   flex: 0 3 45%;
-  max-width: 45em;
 }
 
 .site-article {
