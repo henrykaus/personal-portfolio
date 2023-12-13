@@ -376,6 +376,7 @@ textarea {
 
 .contact__btn--open {
   background-color: var(--lightgray);
+  padding: 8px 11px;
 }
 
 .contact__btn--open:hover {
@@ -454,6 +455,10 @@ textarea {
   .project:first-of-type {
     grid-column-start: span 1;
   }
+
+  .contact__input-container {
+    grid-column-start: span 2;
+  }
 }
 
 @media (max-width: 840px) {
@@ -506,6 +511,10 @@ textarea {
   .pound {
     left: -1em;
   }
+
+  .contact__input-container {
+    grid-column-start: initial;
+  }
 }
 
 @media (max-width: 540px) {
@@ -518,5 +527,9 @@ textarea {
   .nav__link {
     font-size: 0.68em;
     padding: 0.5em;
+  }
+
+  .contact__input-container {
+    grid-column-start: span 2;
   }
 }

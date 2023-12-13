@@ -12,12 +12,22 @@ $(document).ready(() => {
       $('#contact-instructions').text(
         "If you'd like to be in contact, click 'Open Form'."
       );
-      $('#open-form-btn').text('Open Form').removeClass('contact__btn--open');
+      $('#open-form-btn')
+        .text('Open Form')
+        .removeClass('contact__btn--open')
+        .removeAttr('aria-label');
       $('#contact-form').empty().removeClass('contact__form--open');
     } else {
       // Change instructions for submitting a form, change button text, and
       // create the form
-      $('#open-form-btn').text('Close Form').addClass('contact__btn--open');
+      $('#open-form-btn')
+        .empty()
+        .addClass('contact__btn--open')
+        .attr('aria-label', 'close contact form')
+        .append(
+          $('<i>')
+            .addClass('fa-solid fa-xmark fa-lg')
+        );
       $('#contact-instructions').text(
         "To get in contact, fill in your info below and click 'Submit'."
       );
@@ -33,6 +43,7 @@ $(document).ready(() => {
         .append(
           // Name label and input
           $('<div>')
+            .addClass('contact__input-container')
             .append(
               $('<label>')
                 .attr('for', 'name-input')
@@ -53,6 +64,7 @@ $(document).ready(() => {
         .append(
           // Email label and input
           $('<div>')
+            .addClass('contact__input-container')
             .append(
               $('<label>')
                 .attr('for', 'email-input')
