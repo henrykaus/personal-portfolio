@@ -1,8 +1,8 @@
 # Personal Portfolio
 
-Here is my interactive personal portfolio website. This site was created as the final project for **CS 463: Intro to Web Development**. On this site, you will find sections about myself, past work experience, past projects and a contact form, along with a responsive nav bar to jump to each section. Along with the overarching goal of creating a sleek looking portfolio for myself, I also took accessibility into heavy consideration which dictated many of the element and color-contrast selections. Responsiveness was also a major focus and you should hopefully find that the site will appear pleasant on a wide-array of display sizes.
+Here is my interactive personal portfolio website. This site was originally created as the final project for **CS 463: Intro to Web Development**. On this site, you will find sections about myself, past work experience, past projects and a contact form, along with a responsive nav bar to jump to each section. Along with the overarching goal of creating a sleek looking portfolio for myself, I also took accessibility into heavy consideration which dictated many of the element and color-contrast selections. Responsiveness was also a major focus and you should hopefully find that the site will appear pleasant on a wide-array of display sizes.
 
-> **Portfolio URL:** https://henrykaus.github.io/personal-portfolio/
+> **Portfolio URL:** https://www.henrykaus.com
 
 ## How to Run:
 
