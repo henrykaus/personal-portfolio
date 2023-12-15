@@ -1,5 +1,6 @@
 $(document).ready(() => {
   let formIsOpen = false; // Form is closed when page opens
+  let capstoneIsFlipped = false;
 
   /**
    * FORM: open-form-btn onClick
@@ -117,6 +118,18 @@ $(document).ready(() => {
 
     // Change open status of form when button is clicked
     formIsOpen = !formIsOpen;
+  });
+
+  $('.flip-btn').on('click', (event) => {
+    if (capstoneIsFlipped) {
+      $('.capstone__card--front').fadeIn(500);
+      $('.capstone__card--back').fadeOut(500);
+    } else {
+      $('.capstone__card--front').fadeOut(500);
+      $('.capstone__card--back').fadeIn(500);
+    }
+
+    capstoneIsFlipped = !capstoneIsFlipped;
   });
 
   /**
