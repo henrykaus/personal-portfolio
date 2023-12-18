@@ -22,25 +22,34 @@
       <p class="description">
         A student, a developer, and a creative just throwing darts at a board and seeing what sticks.
       </p>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="#about-me"># about me</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#work-experience"># work experience</a>
-          </li>
-          <!-- <li class="nav__item">
-            <a class="nav__link" href="#capstone"># capstone</a>
-          </li> -->
-          <li class="nav__item">
-            <a class="nav__link" href="#projects"># projects</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#contact"># contact</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="nav-container">
+        <button
+          aria-label="toggle menu"
+          class="dropdown-btn"
+          id="dropdown-nav-btn"
+        >
+          <i class="fa-solid fa-angle-down fa-lg" id="toggle-btn-icon"></i>
+        </button>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#about-me"># about me</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#work-experience"># work experience</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#capstone"># capstone</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#projects"># projects</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#contact"># contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- Right-side Main Content -->
@@ -95,7 +104,7 @@
           <div>
             <header class="section-header">
               <div>
-                <h3 class="work-card__position">Software Backend Engineering Intern</h3>
+                <h3 class="position">Software Backend Engineering Intern</h3>
                 •
                 <a
                   class="link"
@@ -130,7 +139,7 @@
           <div>
             <header class="section-header">
               <div>
-                <h3 class="work-card__position">Software Frontend Engineering Intern</h3>
+                <h3 class="position">Software Frontend Engineering Intern</h3>
                 •
                 <a
                   class="link"
@@ -164,7 +173,7 @@
           <div>
             <header class="section-header">
               <div>
-                <h3 class="work-card__position">
+                <h3 class="position">
                   Software QA Automation Intern
                 </h3>
                 •
@@ -201,7 +210,7 @@
           <div>
             <header class="section-header">
               <div>
-                <h3 class="work-card__position">Journalist</h3>
+                <h3 class="position">Journalist</h3>
                 •
                 <a class="link" href="https://tigardlife.com/" target="_blank">
                   Tigard and Tualatin Life
@@ -212,13 +221,7 @@
               </p>
             </header>
             <p class="description">
-              At this publisher, I wrote and photographed 90+ sports and general
-              interest articles published to 90,000+ recipients. I managed my
-              time independently to meet strict deadlines while sorting
-              interview opportunities, writing sessions, editorial meetings, and
-              photoshoots among others. I edited and designed article layouts
-              for print using InDesign while managing the newspapers' online
-              websites in WordPress to publish and publicize articles.
+              At this publisher, I wrote and photographed 90+ sports and general interest articles published to 90,000+ recipients. I managed my time independently to meet strict deadlines while sorting interview opportunities, writing sessions, editorial meetings, and photoshoots among others. I edited and designed article layouts for print using InDesign while managing the newspapers' online websites in WordPress to publish and publicize articles.
             </p>
             <ul class="skill-list">
               <li class="skill">Adobe Photoshop</li>
@@ -247,8 +250,49 @@
             </button>
           </section>
 
-          <section class="capstone__card project capstone__card--back">
-            Team Lead - Portland State University<br>Under construction
+          <!-- Capstone Card Back -->
+          <section class="capstone__card capstone__card--back">
+            <img src="" alt="">
+            <div>
+              <header class="section-header">
+                <h3 class="position">WonderTix Team Lead</h3>
+                <ul class="link-list">
+                  <li class="link-list__item">
+                    <a
+                      aria-label="wondertix github"
+                      class="capstone__link"
+                      href="https://github.com/wondertix/wondertix"
+                      target="_blank"
+                    >
+                      <i class="fa-solid fa-code-branch fa-lg"></i>
+                    </a>
+                  </li>
+                  <li class="link-list__item">
+                    <a
+                      aria-label="wondertix website"
+                      class="capstone__link"
+                      href="https://www.wondertix.com"
+                      target="_blank"
+                    >
+                      <i class="fa-solid fa-arrow-up-right-from-square fa-lg"></i>
+                    </a>
+                  </li>
+                </ul>
+                <p class="capstone__details">SUMMER – FALL 2023 • Portland State</p>
+              </header>
+              <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quidem neque corrupti placeat tempora, soluta eos tenetur sed voluptas illum dolores laboriosam expedita minima quae quibusdam, culpa amet eius necessitatibus. 
+              </p>
+              <!-- <ul class="skill-list">
+                <li class="skill">React.js</li>
+                <li class="skill">Jira</li>
+                <li class="skill">TypeScript</li>
+                <li class="skill">Tailwind</li>
+                <li class="skill">Postgres</li>
+                <li class="skill">Git/GitHub</li>
+                <li class="skill">Prisma ORM</li>
+              </ul> -->
+            </div>
             <button
               aria-label="Flip capstone card to front"
               class="flip-btn"
@@ -263,8 +307,7 @@
       <article class="site-article" id="projects">
         <h2 class="article-header"><span class="pound">#</span>projects</h2>
         <p class="description">
-          Besides work in the field, I've spent my time both in and out of
-          school immersing myself in varying side projects.
+          Besides work in the field, I've spent my time both in and out of school immersing myself in varying side projects.
         </p>
         <div class="projects-container">
           <!-- Historical Weather Charter Project -->

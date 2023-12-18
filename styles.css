@@ -1,5 +1,5 @@
 /* Importing Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&family=Roboto+Mono:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;450;500;600&family=Roboto+Mono:wght@400;600&display=swap');
 
 * {
   box-sizing: border-box;
@@ -91,6 +91,10 @@ textarea {
 /* Tag line of page */
 .heading > .description {
   max-width: 475px;
+}
+
+.dropdown-btn {
+  display: none;
 }
 
 .nav {
@@ -192,8 +196,11 @@ textarea {
   border-radius: 5px;
   color: var(--black);
   display: inline-flex;
-  padding: 0.35em;
   transition: 0.2s ease-in-out;
+}
+
+.about__header .link-list__link {
+  padding: 0.35em;
 }
 
 .icon {
@@ -226,9 +233,10 @@ textarea {
   font-size: 0.85em;
 }
 
-.work-card__position {
+.position {
   display: inline;
   font-size: 1em;
+  margin: 0;
 }
 
 .work-card__location {
@@ -298,8 +306,14 @@ textarea {
 
 .capstone__card--back {
   display: none;
+  grid-template-areas:
+    "img header"
+    "img desc";
   top: 0;
   background-color: var(--white);
+  border: 2px solid var(--lightgray);
+  box-shadow: 0px 2px 4px var(--lightgray);
+  -webkit-box-shadow: 0px 2px 4px var(--lightgray);
 }
 
 .capstone__title {
@@ -310,7 +324,6 @@ textarea {
   text-shadow: 0.1em 0.1em 0.5em var(--black);
   position: relative;
   display: inline-block;
-  /* border-bottom: 1px solid var(--white); */
   padding-bottom: 0.4em;
 }
 
@@ -332,7 +345,26 @@ textarea {
   margin-left: 0.1em;
 }
 
+.capstone__link {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.capstone__link:hover {
+  color: var(--darkblue);
+}
+
+.capstone__card--back .link-list {
+  display: flex;
+  gap: 0.7em;
+}
+
+.capstone__card--back .skill-list {
+  width: calc(100% - 2.2em);
+}
+
 .flip-btn {
+  color: var(--darkblue);
   background-color: var(--white);
   border: none;
   cursor: pointer;
@@ -345,11 +377,27 @@ textarea {
 }
 
 .flip-btn:hover {
-  background-color: var(--lightred);
-  box-shadow: 0px 0px 8px var(--lightred);
+  background-color: var(--darkblue);
+  box-shadow: 0px 0px 8px var(--darkblue);
+  color: var(--white);
   transition: 0.2s ease-out;
 }
 
+.capstone__card--back .flip-btn {
+  bottom: calc(1em - 2px);
+  right: calc(1em - 2px);
+}
+
+.capstone__details {
+  flex-basis: 100%;
+  margin: 0;
+  font-size: 0.8em;
+  color: var(--mediumgray);
+  font-weight: 450;
+}
+.capstone__card .description {
+  grid-area: desc;
+}
 
 /***** PROJECTS STYLES *****/
 .projects-container {
@@ -561,33 +609,64 @@ textarea {
     position: static;
   }
 
-  /* Make nav horizontal */
+  /* Make mobile nav */
+  .nav-container {
+    text-align: right;
+    position: absolute;
+    right: 2em;
+    top: 5.5em;
+  }
+
   .nav {
     margin: 0;
+    display: none;
   }
 
-  .nav__list {
-    background-color: var(--mediumgray);
-    border-radius: 5px;
-    box-shadow: 0px 0px 8px var(--mediumgray);
-    -webkit-box-shadow: 0px 0px 8px var(--mediumgray);
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 3em;
-    margin-top: 2em;
+  .nav--shown {
+    display: block;
   }
 
+  .dropdown-btn,
   .nav__link {
     color: var(--white);
     font-weight: 500;
     padding-left: 0.5em;
     padding-right: 0.5em;
+
+    background-color: var(--mediumgray);
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px var(--mediumgray);
+    -webkit-box-shadow: 0px 0px 8px var(--mediumgray);
   }
 
+  .dropdown-btn {
+    display: inline;
+    border: none;
+    font-size: 1em;
+    padding: 0.25em 0.4em 0.25em 0.4em;
+  }
+
+  .dropdown-btn > svg {
+    transition: 0.3s;
+  }
+
+  .dropdown-btn.open > svg {
+    transform: rotate(180deg);
+    transition: 0.3s;
+  }
+
+  .nav__link {
+    width: 100%;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+  }
+
+  .dropdown-btn:hover,
   .nav__link:hover {
     background-color: var(--black);
     box-shadow: 0px 0px 8px var(--black);
     -webkit-box-shadow: 0px 0px 8px var(--black);
+    cursor: pointer;
   }
 
   #about-me.site-article {
@@ -604,17 +683,6 @@ textarea {
 }
 
 @media (max-width: 540px) {
-  /* Shrink size of nav at 540px */
-  .nav__list {
-    margin-bottom: 2em;
-    margin-top: 1.5em;
-  }
-
-  .nav__link {
-    font-size: 0.68em;
-    padding: 0.5em;
-  }
-
   .contact__input-container {
     grid-column-start: span 2;
   }
