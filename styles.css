@@ -375,7 +375,6 @@ button {
 
 .capstone__card--back .link-list {
   display: flex;
-  /* gap: 0.2em; */
 }
 
 .capstone__card--back .skill-list {
@@ -534,7 +533,6 @@ button {
   background-color: var(--lightgray);
   padding-left: 0.72em;
   padding-right: 0.72em;
-  /* padding: 8px 11px; */
 }
 
 .contact__btn--open:hover {
@@ -635,7 +633,7 @@ button {
     grid-template-areas: 
       "header dropdown-btn"
       "desc   desc";
-    grid-template-columns: auto 2em;
+    grid-template-columns: auto 2.25em;
   }
 
   .site-name {
@@ -649,6 +647,7 @@ button {
   /* Make mobile nav */
   .nav-container {
     align-self: center;
+    justify-self: right;
     position: relative;
     grid-area: dropdown-btn;
   }
@@ -687,7 +686,6 @@ button {
     font-weight: 450;
     padding: 0.3em 0.5em;
     width: 100%;
-    margin: 1px 0;
   }
 
   .dropdown-btn {
