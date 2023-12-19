@@ -54,6 +54,7 @@ textarea {
   font-family: Rubik, sans-serif;
 }
 
+input[type='submit'],
 button {
   cursor: pointer;
 }
