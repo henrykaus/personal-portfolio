@@ -130,7 +130,7 @@ const handleFlipCapstoneCard = (event) => {
     $('.capstone__card--front').fadeIn(500);
     $('.capstone__card--back').fadeOut(500);
   } else {
-    // Should'nt be using .css
+    // Shouldn't be using .css
     $('.capstone__card--front').fadeOut(500);
     $('.capstone__card--back')
       .css("display", "flex")
@@ -166,6 +166,7 @@ const handleContactFormSubmit = (event) => {
 
 $(document).ready(() => {
   $('#dropdown-nav-btn').on('click', handleNavButtonClick);
+  $('.nav__link').on('click', handleNavButtonClick);
   $('.flip-btn').on('click', handleFlipCapstoneCard);
   $('#open-form-btn').on('click', handleFormButtonClick);
   contactForm.onsubmit = handleContactFormSubmit;
