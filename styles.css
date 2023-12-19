@@ -396,6 +396,11 @@ button {
   transition: 0.2s ease-out;
 }
 
+.flip-btn:hover svg {
+  transform: rotate(180deg);
+  transition: 0.2s ease-out;
+}
+
 .capstone__card--back .flip-btn {
   bottom: calc(1em - 2px);
   right: calc(1em - 2px);
