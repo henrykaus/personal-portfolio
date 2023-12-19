@@ -685,7 +685,7 @@ button {
     color: var(--black);
     background-color: var(--grey-opaque);
     border: none;
-    padding: 0.35em 0.6em 0.45em;
+    padding: 0.45em 0.7em 0.55em;
     transition: 0.2s ease-out;
   }
 
@@ -696,7 +696,7 @@ button {
   }
 
   .dropdown-btn.open {
-    padding: 0.45em 0.6em 0.35em;
+    padding: 0.55em 0.7em 0.45em;
   }
 
   .dropdown-btn > svg {
