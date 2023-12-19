@@ -1,11 +1,21 @@
 const contactForm = document.querySelector('#contact-form');
 let formIsOpen = false; // Form is closed when page opens
+let navIsOpen = false;
 let capstoneIsFlipped = false; // Capstone card is front-facing when page opens
 
 const handleNavButtonClick = (event) => {
-  $('.nav').toggleClass('nav--shown');
-  $('#dropdown-nav-btn')
-    .toggleClass('open');
+  if (navIsOpen) {
+    $('#dropdown-nav-btn')
+      .toggleClass('open')
+      .attr('aria-expanded', 'false');
+  } else {
+    $('#dropdown-nav-btn')
+      .toggleClass('open')
+      .attr('aria-expanded', 'true');
+  }
+
+  $('.nav__list').toggleClass('nav__list--shown');
+  navIsOpen = !navIsOpen;
 }
 
 /**
@@ -127,12 +137,12 @@ const handleFormButtonClick = (event) => {
 
 const handleFlipCapstoneCard = (event) => {
   if (capstoneIsFlipped) {
-    $('.capstone__card--front').fadeIn(500);
-    $('.capstone__card--back').fadeOut(500);
+    $('.capstone__card.front').fadeIn(500);
+    $('.capstone__card.back').fadeOut(500);
   } else {
     // Shouldn't be using .css
-    $('.capstone__card--front').fadeOut(500);
-    $('.capstone__card--back')
+    $('.capstone__card.front').fadeOut(500);
+    $('.capstone__card.back')
       .css("display", "flex")
       .hide()
       .fadeIn(500);
@@ -167,7 +177,7 @@ const handleContactFormSubmit = (event) => {
 $(document).ready(() => {
   $('#dropdown-nav-btn').on('click', handleNavButtonClick);
   $('.nav__link').on('click', handleNavButtonClick);
-  $('.flip-btn').on('click', handleFlipCapstoneCard);
+  $('.capstone__flip-btn').on('click', handleFlipCapstoneCard);
   $('#open-form-btn').on('click', handleFormButtonClick);
   contactForm.onsubmit = handleContactFormSubmit;
 });

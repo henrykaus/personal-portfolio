@@ -54,8 +54,8 @@ textarea {
   font-family: Rubik, sans-serif;
 }
 
-input[type='submit'],
-button {
+button,
+input[type='submit'] {
   cursor: pointer;
 }
 
@@ -100,7 +100,7 @@ button {
   max-width: 475px;
 }
 
-.dropdown-btn {
+.nav__btn {
   display: none;
 }
 
@@ -297,30 +297,29 @@ button {
   border-radius: 12px;
   box-shadow: -6px 6px 14px var(--gray);
   -webkit-box-shadow: -6px 6px 14px var(--gray);
+  height: 100%;
   padding: 1em;
   position: absolute;
   width: 100%;
-  height: 100%;
 }
 
-.capstone__card--front {
+.capstone__card.front {
   background-image: linear-gradient(var(--black-opaque) 100%, var(--black-opaque) 100%), url("img/wondertix.png");
-  background-size: cover;
   background-repeat: no-repeat;
-  padding-left: 1.5em;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 1.5em;
 }
 
-.capstone__card--back {
-  display: none;
-  gap: 1em;
-  top: 0;
+.capstone__card.back {
   background-color: var(--white);
   border: 2px solid var(--lightgray);
   box-shadow: 0px 2px 4px var(--lightgray);
   -webkit-box-shadow: 0px 2px 4px var(--lightgray);
+  display: none;
+  gap: 1em;
   overflow: hidden;
 }
 
@@ -334,36 +333,35 @@ button {
 .capstone__title {
   color: var(--white);
   font-size: 2em;
-  margin-top: 0.2em;
-  margin-bottom: 0;
+  margin: 0;
   text-shadow: 0.1em 0.1em 0.5em var(--black);
   position: relative;
-  display: inline-block;
   padding-bottom: 0.4em;
 }
 
 .capstone__title::after {
+  background-color: var(--white);
+  bottom: 0;
   content: "";
   height: 1px;
-  width: 2.5em;
-  bottom: 0;
   left: 0.1em;
   position: absolute;
-  background-color: var(--white);
+  width: 2.5em;
 }
 
 .capstone__tagline {
   color: var(--lightgray);
   font-size: 0.9em;
-  width: 33%;
-  min-width: 11em;
+  margin-bottom: 0;
   margin-left: 0.1em;
+  min-width: 11em;
+  width: 33%;
 }
 
 .capstone__link {
   color: var(--black);
   text-decoration: none;
-  padding: 0 0.4em;
+  padding: 0 0.2em;
 }
 
 .capstone__link:hover {
@@ -374,50 +372,47 @@ button {
   padding-right: 0;
 }
 
-.capstone__card--back .link-list {
-  display: flex;
-}
-
-.capstone__card--back .skill-list {
+/* .capstone__card.back .skill-list {
   width: calc(100% - 2.2em);
-}
+} */
 
-.flip-btn {
-  color: var(--darkblue);
+.capstone__flip-btn {
   background-color: var(--white);
   border: none;
+  border-radius: 8px;
+  bottom: 1em;
+  color: var(--darkblue);
   padding: 0.7em;
   position: absolute;
-  bottom: 1em;
   right: 1em;
-  border-radius: 8px;
   transition: 0.2s ease-out;
 }
 
-.flip-btn:hover {
+.capstone__flip-btn:hover {
   background-color: var(--darkblue);
   box-shadow: 0px 0px 8px var(--darkblue);
   color: var(--white);
   transition: 0.2s ease-out;
 }
 
-.flip-btn:hover svg {
+.capstone__flip-btn:hover svg {
   transform: rotate(180deg);
   transition: 0.2s ease-out;
 }
 
-.capstone__card--back .flip-btn {
+.capstone__card.back .capstone__flip-btn {
   bottom: calc(1em - 2px);
   right: calc(1em - 2px);
 }
 
 .capstone__details {
-  flex-basis: 100%;
-  margin: 0;
-  font-size: 0.8em;
   color: var(--mediumgray);
+  flex-basis: 100%;
+  font-size: 0.8em;
   font-weight: 450;
+  margin: 0;
 }
+
 .capstone__card .description {
   grid-area: desc;
 }
@@ -628,13 +623,13 @@ button {
   }
 
   .heading {
-    padding-top: 4.5em;
-    position: static;
     display: grid;
     grid-template-areas: 
-      "header dropdown-btn"
+      "header nav-btn"
       "desc   desc";
     grid-template-columns: auto 2.25em;
+    padding-top: 4.5em;
+    position: static;
   }
 
   .site-name {
@@ -646,41 +641,67 @@ button {
   }
 
   /* Make mobile nav */
-  .nav-container {
+  .nav {
     align-self: center;
+    grid-area: nav-btn;
     justify-self: right;
+    margin: 0;
     position: relative;
-    grid-area: dropdown-btn;
   }
 
-  .nav {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 0;
+  .nav__btn {
+    background-color: var(--grey-opaque);
+    border: none;
+    border-radius: 5px;
+    color: var(--black);
+    display: inline;
+    padding: 0.5em 0.8em;
+    transition: 0.2s ease-out;
+  }
+
+  .nav__btn > svg {
+    transition: transform 0.2s ease-out;
+  }
+
+  .nav__btn.open {
+    padding: 0.5em 0.8em;
+  }
+
+  .nav__btn.open > svg {
+    transform: rotate(180deg);
+    transition: transform 0.2s ease-out;
+  }
+
+  .nav__btn:hover {
+    background-color: var(--black-opaque);
+    color: var(--white);
+    transition: 0.2s ease-out;
+  }
+
+  .nav__list {
     background-color: var(--white);
     border: 2px solid var(--lightgray);
     border-radius: 5px;
     box-shadow: 0px 2px 4px var(--lightgray);
     -webkit-box-shadow: 0px 2px 4px var(--lightgray);
+    display: none;
+    margin: 0.75em 0 0 0;
+    position: absolute;
+    right: 0;
   }
 
-  .nav--shown {
+  .nav__list--shown {
     display: block;
   }
 
-  .nav__list {
-    margin: 0;
-  }
-
   .nav__item:not(:last-child)::after {
+    background-color: var(--lightgray);
+    bottom: -1px;
     content: "";
     height: 2px;
-    width: calc(100% - 1em);
-    position: absolute;
-    bottom: -1px;
     left: 0.5em;
-    background-color: var(--lightgray);
+    position: absolute;
+    width: calc(100% - 1em);
   }
 
   .nav__link {
@@ -689,54 +710,17 @@ button {
     width: 100%;
   }
 
-  .dropdown-btn {
-    border-radius: 5px;
-    display: inline;
-    color: var(--black);
-    background-color: var(--grey-opaque);
-    border: none;
-    padding: 0.5em 0.8em;
-    transition: 0.2s ease-out;
+  .nav__item:first-of-type .nav__link {
+    border-radius: 3px 3px 0 0;
   }
 
-  .dropdown-btn:hover {
-    background-color: var(--black-opaque);
-    color: var(--white);
-    transition: 0.2s ease-out;
-  }
-
-  .dropdown-btn.open {
-    padding: 0.5em 0.8em;
-  }
-
-  .dropdown-btn > svg {
-    transition: transform 0.2s;
-  }
-
-  .dropdown-btn.open > svg {
-    transform: rotate(180deg);
-    transition: transform 0.2s;
+  .nav__item:last-of-type .nav__link {
+    border-radius: 0 0 3px 3px;
   }
 
   .nav__link:hover {
     border-radius: 0;
     font-weight: 450;
-  }
-
-  .nav__item:first-of-type .nav__link:hover {
-    border-radius: 3px 3px 0 0;
-  }
-
-  .nav__item:last-of-type .nav__link:hover {
-    border-radius: 0 0 3px 3px;
-  }
-
-  .nav__item:first-of-type .nav__link {
-    margin: 0 0 1px 0;
-  }
-
-  .nav__item:last-of-type .nav__link {
-    margin: 1px 0 0 0;
   }
 
   #about-me.site-article {

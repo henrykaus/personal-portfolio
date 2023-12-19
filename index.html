@@ -22,34 +22,32 @@
       <p class="description">
         A student, a developer, and a creative just throwing darts at a board and seeing what sticks.
       </p>
-      <div class="nav-container">
+      <nav class="nav">
         <button
           aria-label="Toggle nav menu"
-          class="dropdown-btn"
+          class="nav__btn"
           id="dropdown-nav-btn"
         >
-          <i class="fa-solid fa-caret-down fa-xl" id="toggle-btn-icon"></i>
+          <i class="fa-solid fa-caret-down fa-xl"></i>
         </button>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link" href="#about-me"># about me</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#work-experience"># work experience</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#capstone"># capstone</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#projects"># projects</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#contact"># contact</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#about-me"># about me</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#work-experience"># work experience</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#capstone"># capstone</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#projects"># projects</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#contact"># contact</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Right-side Main Content -->
@@ -236,22 +234,22 @@
       <!-- Capstone Article -->
       <article class="site-article" id="capstone">
         <h2 class="article-header"><span class="pound">#</span>capstone</h2>
-        <div class="capstone-card-container" id="capstone-card">
-          <section class="capstone__card capstone__card--front">
+        <div class="capstone-card-container">
+          <section class="capstone__card front">
             <h3 class="capstone__title">WonderTix</h3>
             <p class="capstone__tagline">
               Ticketing management software by leading a team of six
             </p>
             <button
               aria-label="Flip capstone card to back"
-              class="flip-btn"
+              class="capstone__flip-btn"
             >
               <i class="fa-solid fa-rotate fa-xl flip-btn__icon"></i>
             </button>
           </section>
 
           <!-- Capstone Card Back -->
-          <section class="capstone__card capstone__card--back">
+          <section class="capstone__card back">
             <img
               alt=""
               src="img/wondertix-admin.png"
@@ -301,7 +299,7 @@
             </div>
             <button
               aria-label="Flip capstone card to front"
-              class="flip-btn"
+              class="capstone__flip-btn"
             >
               <i class="fa-solid fa-rotate fa-xl flip-btn__icon"></i>
             </button>
