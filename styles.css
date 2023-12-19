@@ -362,15 +362,20 @@ button {
 .capstone__link {
   color: var(--black);
   text-decoration: none;
+  padding: 0 0.4em;
 }
 
 .capstone__link:hover {
   color: var(--darkblue);
 }
 
+.link-list__item:last-of-type .capstone__link {
+  padding-right: 0;
+}
+
 .capstone__card--back .link-list {
   display: flex;
-  gap: 0.7em;
+  /* gap: 0.2em; */
 }
 
 .capstone__card--back .skill-list {
@@ -527,7 +532,9 @@ button {
 
 .contact__btn--open {
   background-color: var(--lightgray);
-  padding: 8px 11px;
+  padding-left: 0.72em;
+  padding-right: 0.72em;
+  /* padding: 8px 11px; */
 }
 
 .contact__btn--open:hover {
@@ -642,13 +649,11 @@ button {
   /* Make mobile nav */
   .nav-container {
     align-self: center;
-    text-align: right;
     position: relative;
     grid-area: dropdown-btn;
   }
 
   .nav {
-    /* margin: 0.5em 0; */
     display: none;
     position: absolute;
     right: 0;
@@ -679,9 +684,10 @@ button {
   }
 
   .nav__link {
-    font-weight: 500;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    font-weight: 450;
+    padding: 0.3em 0.5em;
+    width: 100%;
+    margin: 1px 0;
   }
 
   .dropdown-btn {
@@ -690,7 +696,7 @@ button {
     color: var(--black);
     background-color: var(--grey-opaque);
     border: none;
-    padding: 0.45em 0.7em 0.55em;
+    padding: 0.5em 0.8em;
     transition: 0.2s ease-out;
   }
 
@@ -701,7 +707,7 @@ button {
   }
 
   .dropdown-btn.open {
-    padding: 0.55em 0.7em 0.45em;
+    padding: 0.5em 0.8em;
   }
 
   .dropdown-btn > svg {
@@ -715,6 +721,7 @@ button {
 
   .nav__link:hover {
     border-radius: 0;
+    font-weight: 450;
   }
 
   .nav__item:first-of-type .nav__link:hover {
@@ -723,11 +730,6 @@ button {
 
   .nav__item:last-of-type .nav__link:hover {
     border-radius: 0 0 3px 3px;
-  }
-
-  .nav__link {
-    width: 100%;
-    margin: 1px 0;
   }
 
   .nav__item:first-of-type .nav__link {
