@@ -401,11 +401,6 @@ input[type='submit'] {
   transition: 0.2s ease-out;
 }
 
-.capstone__card.back .capstone__flip-btn {
-  bottom: calc(1em - 2px);
-  right: calc(1em - 2px);
-}
-
 .capstone__details {
   color: var(--mediumgray);
   flex-basis: 100%;
@@ -414,8 +409,18 @@ input[type='submit'] {
   margin: 0;
 }
 
+.capstone__card__content {
+  position: relative;
+}
+
+.capstone__card__content .skill-list {
+  position: absolute;
+  bottom: 0;
+}
+
 .capstone__card .description {
   grid-area: desc;
+  font-size: 0.9em;
 }
 
 /***** PROJECTS STYLES *****/

@@ -238,14 +238,8 @@
           <section class="capstone__card front">
             <h3 class="capstone__title">WonderTix</h3>
             <p class="capstone__tagline">
-              Ticketing management software by leading a team of six
+              Creating a ticketing management platform in a team lead position
             </p>
-            <button
-              aria-label="Flip capstone card to back"
-              class="capstone__flip-btn"
-            >
-              <i class="fa-solid fa-rotate fa-xl flip-btn__icon"></i>
-            </button>
           </section>
 
           <!-- Capstone Card Back -->
@@ -255,10 +249,10 @@
               src="img/wondertix-admin.png"
               class="capstone__card--back__image"
             >
-            <div>
+            <div class="capstone__card__content">
               <header class="section-header">
                 <h3 class="position">WonderTix Team Lead</h3>
-                <ul class="link-list">
+                <!-- <ul class="link-list">
                   <li class="link-list__item">
                     <a
                       aria-label="WonderTix GitHub"
@@ -279,31 +273,67 @@
                       <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                   </li>
-                </ul>
+                </ul> -->
                 <p class="capstone__details">
                   SUMMER – FALL 2023 • Portland State
                 </p>
               </header>
               <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quidem neque corrupti placeat tempora, soluta eos tenetur sed voluptas illum dolores laboriosam expedita minima quae quibusdam, culpa amet eius necessitatibus. 
+                WonderTix is a full-featured ticket sales platform created to suit the business needs of our client, 
+                <span class="description--bold">
+                  <a
+                    class="link"
+                    href="https://portlandplayhouse.org/"
+                    target="_blank"
+                  >
+                    Portland Playhouse (PPH)
+                  </a>
+                </span>.
               </p>
-              <!-- <ul class="skill-list">
-                <li class="skill">React.js</li>
-                <li class="skill">Jira</li>
-                <li class="skill">TypeScript</li>
-                <li class="skill">Tailwind</li>
-                <li class="skill">Postgres</li>
-                <li class="skill">Git/GitHub</li>
-                <li class="skill">Prisma ORM</li>
-              </ul> -->
+              <p class="description">
+                Over the 6-month period, I served as team lead for our cohort of 6 software engineers. In this role, I communicated with our client to acquire software requirements; delegated work to engineers per 2-week sprint; and frequently stepped in to provide support to the team.
+              </p>
+              <ul class="skill-list">
+                <li class="skill">
+                  <a 
+                    class="project__link"
+                    href="https://www.wondertix.com/"
+                    target="_blank"
+                  >
+                    WonderTix
+                    <i class="fa-solid fa-link fa-sm"></i>
+                  </a>
+                </li>
+                <li class="skill">
+                  <a 
+                    class="project__link"
+                    href="https://docs.google.com/document/d/1NsWtzZ5rCt4gOCaW2rzyDqntGygrOdCd08tGIgvvSXY/edit?usp=sharing"
+                    target="_blank"
+                  >
+                    Project Document
+                    <i class="fa-regular fa-file-lines"></i>
+                  </a>
+                </li>
+                <li class="skill">
+                  <a 
+                    class="project__link"
+                    href="https://github.com/wondertix/wondertix/"
+                    target="_blank"
+                  >
+                    GitHub
+                    <i class="fa-solid fa-code-merge fa-sm"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
-            <button
-              aria-label="Flip capstone card to front"
-              class="capstone__flip-btn"
-            >
-              <i class="fa-solid fa-rotate fa-xl flip-btn__icon"></i>
-            </button>
           </section>
+          <button
+            aria-label="Flip capstone card"
+            class="capstone__flip-btn"
+            id="flip-btn"
+          >
+            <i class="fa-solid fa-rotate fa-xl flip-btn__icon"></i>
+          </button>
         </div>
       </article>
 

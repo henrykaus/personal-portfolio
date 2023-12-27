@@ -177,7 +177,7 @@ const handleContactFormSubmit = (event) => {
 $(document).ready(() => {
   $('#dropdown-nav-btn').on('click', handleNavButtonClick);
   $('.nav__link').on('click', handleNavButtonClick);
-  $('.capstone__flip-btn').on('click', handleFlipCapstoneCard);
+  $('#flip-btn').on('click', handleFlipCapstoneCard);
   $('#open-form-btn').on('click', handleFormButtonClick);
   contactForm.onsubmit = handleContactFormSubmit;
 });
