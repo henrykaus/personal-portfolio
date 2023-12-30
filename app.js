@@ -33,7 +33,7 @@ const handleFlipCapstoneCard = (event) => {
   } else {
     $('.capstone__card--front').fadeOut(500);
     $('.capstone__card--back')
-      .toggleClass('flex')
+      .css('display', 'flex')
       .hide()
       .fadeIn(500);
   }

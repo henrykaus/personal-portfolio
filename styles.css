@@ -324,11 +324,6 @@ input[type='submit'] {
   overflow: hidden;
 }
 
-.flex {
-  /* Class required for flipping between card sides */
-  display: flex;
-}
-
 .capstone__title {
   color: var(--white);
   font-size: 2em;
