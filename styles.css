@@ -291,7 +291,7 @@ input[type='submit'] {
 
 .capstone-card-container {
   position: relative;
-  min-height: 350px;
+  height: 350px;
 }
 
 .capstone__card {
@@ -794,6 +794,6 @@ input[type='submit'] {
 
 @media (max-width: 415px) {
   .capstone-card-container {
-    min-height: 390px;
+    height: 400px;
   }
 }
