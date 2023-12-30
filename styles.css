@@ -27,9 +27,10 @@ body {
   --darkblue: #076ba2;
   --lightred: #e8c8c8;
   --red: #fcbcb8;
+  --body-font: Rubik, sans-serif;
   --code-font: 'Roboto Mono', Consolas, 'Courier New', Courier, monospace;
   color: var(--black);
-  font-family: Rubik, sans-serif;
+  font-family: var(--body-font);
   font-weight: 400;
   font-size: 1em;
 
@@ -52,7 +53,7 @@ input[type='text'],
 input[type='email'],
 input[type='submit'],
 textarea {
-  font-family: Rubik, sans-serif;
+  font-family: var(--body-font);
 }
 
 button,
@@ -256,7 +257,7 @@ input[type='submit'] {
   font-family: var(--code-font);
   font-size: 0.85em;
   font-weight: 400;
-  gap: 0.5em;
+  gap: 0.4em;
   letter-spacing: -0.5px;
   margin: 0;
 }
@@ -275,7 +276,7 @@ input[type='submit'] {
 }
 
 .skill {
-  background: var(--red);
+  background-color: var(--red);
   border-radius: 13px;
   box-shadow: 0px 2px 8px var(--lightred);
   -webkit-box-shadow: 0px 2px 8px var(--lightred);
@@ -283,15 +284,15 @@ input[type='submit'] {
   font-size: 0.8em;
   font-weight: 600;
   letter-spacing: -0.5px;
-  padding: 5px 8px;
+  padding: 0.37em 0.65em;
 }
-
 
 /***** CAPSTONE STYLES *****/
 
 .capstone-card-container {
   position: relative;
-  height: 350px;
+  min-height: 350px;
+  /* height: 350px; */
 }
 
 .capstone__card {
@@ -324,20 +325,12 @@ input[type='submit'] {
   overflow: hidden;
 }
 
-.capstone__card--back__image {
-  width: 40%;
-  object-fit: cover;
-  margin: calc(-1em - 2px);
-  margin-right: 0;
-}
-
 .capstone__title {
   color: var(--white);
   font-size: 2em;
   margin: 0;
-  text-shadow: 0.1em 0.1em 0.5em var(--black);
-  position: relative;
   padding-bottom: 0.4em;
+  position: relative;
 }
 
 .capstone__title::after {
@@ -358,24 +351,6 @@ input[type='submit'] {
   min-width: 11em;
   width: 33%;
 }
-
-.capstone__link {
-  color: var(--black);
-  text-decoration: none;
-  padding: 0 0.2em;
-}
-
-.capstone__link:hover {
-  color: var(--darkblue);
-}
-
-.link-list__item:last-of-type .capstone__link {
-  padding-right: 0;
-}
-
-/* .capstone__card.back .skill-list {
-  width: calc(100% - 2.2em);
-} */
 
 .capstone__flip-btn {
   background-color: var(--white);
@@ -401,6 +376,21 @@ input[type='submit'] {
   transition: 0.2s ease-out;
 }
 
+.capstone__card--back__image {
+  margin: calc(-1em - 2px);
+  margin-right: 0;
+  object-fit: cover;
+  width: 40%;
+}
+
+.capstone__card__content {
+  position: relative;
+}
+
+.capstone__card.back .section-header {
+  row-gap: 0.15em;
+}
+
 .capstone__details {
   color: var(--mediumgray);
   flex-basis: 100%;
@@ -409,18 +399,40 @@ input[type='submit'] {
   margin: 0;
 }
 
-.capstone__card__content {
-  position: relative;
-}
-
-.capstone__card__content .skill-list {
-  position: absolute;
-  bottom: 0;
-}
-
-.capstone__card .description {
-  grid-area: desc;
+.capstone__card.back .description {
   font-size: 0.9em;
+}
+
+.capstone__link-list {
+  bottom: 0.12em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 0.4em;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: calc(100% - 2.2em);
+}
+
+.capstone__link {
+  align-items: center;
+  background-color: var(--blue);
+  border-radius: 3px;
+  box-shadow: 0px 2px 8px var(--blue);
+  -webkit-box-shadow: 0px 2px 8px var(--blue);
+  color: var(--black);
+  display: flex;
+  font-size: 0.9em;
+  font-weight: 450;
+  gap: 0.4em;
+  padding: 0.2em 0.5em;
+  text-decoration: none;
+}
+
+.capstone__link:hover {
+  color: var(--darkblue);
+  text-decoration: underline;
 }
 
 /***** PROJECTS STYLES *****/
@@ -604,7 +616,11 @@ input[type='submit'] {
 
 /***** MEDIA BREAK POINTS STYLES *****/
 
-@media (max-width: 1200px) {
+@media (max-width: 1240px) {
+  .capstone__card--back__image {
+    display: none;
+  }
+
   /* At 1200px, change project layout to single-column */
   .projects-container {
     grid-template-columns: 1fr;
@@ -624,7 +640,7 @@ input[type='submit'] {
   .site-container {
     display: block;
     margin: 0 auto;
-    max-width: 650px;
+    max-width: 685px;
     padding: 0 2em 0 2.4em;
   }
 
@@ -737,17 +753,43 @@ input[type='submit'] {
     left: -1em;
   }
 
+  .capstone__card--back__image {
+    display: initial;
+  }
+
+  .projects-container {
+    grid-template-columns: 0.5fr 0.5fr;
+  }
+
+  .project:first-of-type {
+    grid-column-start: span 2;
+  }
+
   .contact__input-container {
     grid-column-start: initial;
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 615px) {
   .capstone__card--back__image {
     display: none;
   }
 
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project:first-of-type {
+    grid-column-start: span 1;
+  }
+
   .contact__input-container {
     grid-column-start: span 2;
+  }
+}
+
+@media (max-width: 415px) {
+  .capstone-card-container {
+    min-height: 390px;
   }
 }
