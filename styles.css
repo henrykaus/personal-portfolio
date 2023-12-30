@@ -793,6 +793,16 @@ input[type='submit'] {
 }
 
 @media (max-width: 415px) {
+  /* Makes capstone links be absolute with respect to the .capstone-card-container */
+  .capstone__card__content {
+    position: static;
+  }
+
+  /* Same as above comment */
+  .capstone__link-list {
+    bottom: 1.12em;
+  }
+
   .capstone-card-container {
     height: 400px;
   }
