@@ -292,7 +292,6 @@ input[type='submit'] {
 .capstone-card-container {
   position: relative;
   min-height: 350px;
-  /* height: 350px; */
 }
 
 .capstone__card {
@@ -305,7 +304,7 @@ input[type='submit'] {
   width: 100%;
 }
 
-.capstone__card.front {
+.capstone__card--front {
   background-image: linear-gradient(var(--black-opaque) 100%, var(--black-opaque) 100%), url("img/wondertix.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -315,7 +314,7 @@ input[type='submit'] {
   padding-left: 1.5em;
 }
 
-.capstone__card.back {
+.capstone__card--back {
   background-color: var(--white);
   border: 2px solid var(--lightgray);
   box-shadow: 0px 2px 4px var(--lightgray);
@@ -323,6 +322,11 @@ input[type='submit'] {
   display: none;
   gap: 1em;
   overflow: hidden;
+}
+
+.flex {
+  /* Class required for flipping between card sides */
+  display: flex;
 }
 
 .capstone__title {
@@ -387,7 +391,7 @@ input[type='submit'] {
   position: relative;
 }
 
-.capstone__card.back .section-header {
+.capstone__card--back .section-header {
   row-gap: 0.15em;
 }
 
@@ -399,7 +403,7 @@ input[type='submit'] {
   margin: 0;
 }
 
-.capstone__card.back .description {
+.capstone__card--back .description {
   font-size: 0.9em;
 }
 
@@ -436,6 +440,7 @@ input[type='submit'] {
 }
 
 /***** PROJECTS STYLES *****/
+
 .projects-container {
   display: grid;
   gap: 1em;
@@ -502,6 +507,7 @@ input[type='submit'] {
 }
 
 /***** CONTACT FORM STYLES *****/
+
 .contact__content {
   border: 2px solid var(--lightgray);
   border-radius: 12px;
@@ -621,7 +627,6 @@ input[type='submit'] {
     display: none;
   }
 
-  /* At 1200px, change project layout to single-column */
   .projects-container {
     grid-template-columns: 1fr;
   }
@@ -636,7 +641,6 @@ input[type='submit'] {
 }
 
 @media (max-width: 840px) {
-  /* Change entire site layout to single-column */
   .site-container {
     display: block;
     margin: 0 auto;

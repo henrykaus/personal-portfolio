@@ -1,8 +1,12 @@
 const contactForm = document.querySelector('#contact-form');
 let formIsOpen = false; // Form is closed when page opens
-let navIsOpen = false;
+let navIsOpen = false; // Mobile nav is closed when page opens
 let capstoneIsFlipped = false; // Capstone card is front-facing when page opens
 
+/**
+ * On clicking the #dropdown-nav-btn, the mobile menu is either opened or closed.
+ * On clicking the .nav__link, the menu is closed.
+ */
 const handleNavButtonClick = (event) => {
   if (navIsOpen) {
     $('#dropdown-nav-btn')
@@ -19,8 +23,27 @@ const handleNavButtonClick = (event) => {
 }
 
 /**
- * On clicking the #open-form-btn, the form will either appear or
- * disappear depending on the state (formIsOpen) of the form.
+ * On clicking the #flip-btn, the capstone card will flip to either the front
+ * or back.
+ */
+const handleFlipCapstoneCard = (event) => {
+  if (capstoneIsFlipped) {
+    $('.capstone__card--front').fadeIn(500);
+    $('.capstone__card--back').fadeOut(500);
+  } else {
+    $('.capstone__card--front').fadeOut(500);
+    $('.capstone__card--back')
+      .toggleClass('flex')
+      .hide()
+      .fadeIn(500);
+  }
+
+  capstoneIsFlipped = !capstoneIsFlipped;
+}
+
+/**
+ * On clicking the #open-form-btn, the form will either appear or disappear
+ * depending on the state (formIsOpen) of the form.
  */
 const handleFormButtonClick = (event) => {
   if (formIsOpen) {
@@ -133,22 +156,6 @@ const handleFormButtonClick = (event) => {
 
   // Change open status of form when button is clicked
   formIsOpen = !formIsOpen;
-}
-
-const handleFlipCapstoneCard = (event) => {
-  if (capstoneIsFlipped) {
-    $('.capstone__card.front').fadeIn(500);
-    $('.capstone__card.back').fadeOut(500);
-  } else {
-    // Shouldn't be using .css
-    $('.capstone__card.front').fadeOut(500);
-    $('.capstone__card.back')
-      .css("display", "flex")
-      .hide()
-      .fadeIn(500);
-  }
-
-  capstoneIsFlipped = !capstoneIsFlipped;
 }
 
 /**
