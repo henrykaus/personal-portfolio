@@ -1,0 +1,182 @@
+/***** CAPSTONE STYLES *****/
+
+.capstone-card-container {
+  position: relative;
+  height: 350px;
+}
+
+.capstone__card {
+  border-radius: 12px;
+  box-shadow: -6px 6px 14px var(--gray);
+  -webkit-box-shadow: -6px 6px 14px var(--gray);
+  height: 100%;
+  padding: 1em;
+  position: absolute;
+  width: 100%;
+}
+
+.capstone__card--front {
+  background-image: linear-gradient(var(--black-opaque) 100%, var(--black-opaque) 100%), url("../img/wondertix.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1.5em;
+}
+
+.capstone__card--back {
+  background-color: var(--white);
+  border: 2px solid var(--lightgray);
+  box-shadow: 0px 2px 4px var(--lightgray);
+  -webkit-box-shadow: 0px 2px 4px var(--lightgray);
+  display: none;
+  gap: 1em;
+  overflow: hidden;
+}
+
+.capstone__title {
+  color: var(--white);
+  font-size: 2em;
+  margin: 0;
+  padding-bottom: 0.4em;
+  position: relative;
+}
+
+.capstone__title::after {
+  background-color: var(--white);
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0.1em;
+  position: absolute;
+  width: 2.5em;
+}
+
+.capstone__tagline {
+  color: var(--lightgray);
+  font-size: 0.9em;
+  margin-bottom: 0;
+  margin-left: 0.1em;
+  min-width: 11em;
+  width: 33%;
+}
+
+.capstone__flip-btn {
+  background-color: var(--white);
+  border: none;
+  border-radius: 8px;
+  bottom: 1em;
+  color: var(--darkblue);
+  padding: 0.7em;
+  position: absolute;
+  right: 1em;
+  transition: 0.2s ease-out;
+}
+
+.capstone__flip-btn:hover {
+  background-color: var(--darkblue);
+  box-shadow: 0px 0px 8px var(--darkblue);
+  color: var(--white);
+  transition: 0.2s ease-out;
+}
+
+.capstone__flip-btn:hover svg {
+  transform: rotate(180deg);
+  transition: 0.2s ease-out;
+}
+
+.capstone__card--back__image {
+  margin: calc(-1em - 2px);
+  margin-right: 0;
+  object-fit: cover;
+  width: 40%;
+}
+
+.capstone__card__content {
+  position: relative;
+}
+
+.capstone__card--back .section-header {
+  row-gap: 0.15em;
+}
+
+.capstone__details {
+  color: var(--mediumgray);
+  flex-basis: 100%;
+  font-size: 0.8em;
+  font-weight: 450;
+  margin: 0;
+}
+
+.capstone__card--back .description {
+  font-size: 0.9em;
+}
+
+.capstone__link-list {
+  bottom: 0.12em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 0.4em;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: calc(100% - 2.2em);
+}
+
+.capstone__link {
+  align-items: center;
+  background-color: var(--blue);
+  border-radius: 3px;
+  box-shadow: 0px 2px 8px var(--blue);
+  -webkit-box-shadow: 0px 2px 8px var(--blue);
+  color: var(--black);
+  display: flex;
+  font-size: 0.9em;
+  font-weight: 450;
+  gap: 0.4em;
+  padding: 0.2em 0.5em;
+  text-decoration: none;
+}
+
+.capstone__link:hover {
+  color: var(--darkblue);
+  text-decoration: underline;
+}
+
+/***** MEDIA BREAK POINTS STYLES *****/
+
+@media (max-width: 1240px) {
+  .capstone__card--back__image {
+    display: none;
+  }
+}
+
+@media (max-width: 840px) {
+  .capstone__card--back__image {
+    display: initial;
+  }
+}
+
+@media (max-width: 615px) {
+  .capstone__card--back__image {
+    display: none;
+  }
+}
+
+@media (max-width: 415px) {
+  /* Makes capstone links be absolute with respect to the .capstone-card-container */
+  .capstone__card__content {
+    position: static;
+  }
+
+  /* Same as above comment */
+  .capstone__link-list {
+    bottom: 1em;
+  }
+
+  .capstone-card-container {
+    height: 400px;
+  }
+}

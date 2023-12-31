@@ -1,0 +1,8 @@
+/***** FOOTER STYLES *****/
+
+.copyright {
+  color: var(--mediumgray);
+  font-size: 0.8em;
+  margin-bottom: 1.5em;
+  text-align: center;
+}

@@ -1,0 +1,61 @@
+/***** WORK EXPERIENCE STYLES *****/
+
+#work-experience > .article-header {
+  margin-bottom: 1.5em;
+}
+
+.work-card {
+  align-items: baseline;
+  column-gap: 0.7em;
+  display: grid;
+  grid-template-columns: 0.22fr 0.78fr;
+  margin-bottom: 2em;
+}
+
+.work-card__date {
+  margin: 0;
+  font-size: 0.85em;
+}
+
+.position {
+  display: inline;
+  font-size: 1em;
+  margin: 0;
+}
+
+.work-card__location {
+  align-items: center;
+  color: var(--mediumgray);
+  display: flex;
+  font-family: var(--code-font);
+  font-size: 0.85em;
+  font-weight: 400;
+  gap: 0.4em;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.work-card .description {
+  font-size: 0.9em;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 0.4em;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skill {
+  background-color: var(--red);
+  border-radius: 13px;
+  box-shadow: 0px 2px 8px var(--lightred);
+  -webkit-box-shadow: 0px 2px 8px var(--lightred);
+  font-family: var(--code-font);
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  padding: 0.37em 0.65em;
+}

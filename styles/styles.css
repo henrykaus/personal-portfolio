@@ -1,0 +1,144 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;450;500;600&family=Roboto+Mono:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  touch-action: manipulation;
+}
+
+html {
+  /* Gives smooth href jumps on page */
+  scroll-behavior: smooth;
+}
+
+body {
+  --transparent: rgba(255, 255, 255, 0);
+  --white-opaque: rgba(255, 255, 255, 0.8);
+  --grey-opaque: rgba(0, 0, 0, 0.2);
+  --white: #ffffff;
+  --lightgray: #e8e8e8;
+  --almostgray: #c7c7c7;
+  --gray: #9e9e9e;
+  --mediumgray: #666666;
+  --darkgray: #4f4f4f;
+  --black: #292929;
+  --black-opaque: rgba(0, 0, 0, 0.4);
+  --blue: #b5e2fa;
+  --darkblue: #076ba2;
+  --lightred: #e8c8c8;
+  --red: #fcbcb8;
+
+  --body-font: Rubik, sans-serif;
+  --code-font: 'Roboto Mono', Consolas, 'Courier New', Courier, monospace;
+
+  color: var(--black);
+  font-family: var(--body-font);
+  font-weight: 400;
+  font-size: 1em;
+
+  margin: 0;
+}
+
+/* All headers require at least a font-weight of 500 for this site */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+/* All buttons and inputs should have the Rubik font-family */
+button,
+input[type='text'],
+input[type='email'],
+input[type='submit'],
+textarea {
+  font-family: var(--body-font);
+}
+
+button,
+input[type='submit'] {
+  cursor: pointer;
+}
+
+/***** GENERAL SITE STYLES *****/
+
+.site-container {
+  display: flex;
+  gap: 1em;
+  justify-content: space-evenly;
+  margin: 0 1em;
+}
+
+.site-content {
+  flex: 0 3 45%;
+}
+
+.site-article {
+  margin-top: 3.5em;
+  padding-top: 1em;
+}
+
+.article-header {
+  margin-top: 0;
+  position: relative;
+}
+
+.pound {
+  color: var(--mediumgray);
+  font-weight: 400;
+  left: -1.25em;
+  position: absolute;
+}
+
+.section-header {
+  column-gap: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 0.25em;
+}
+
+/* Class used for any regular text */
+.description {
+  color: var(--darkgray);
+}
+
+/* Class used for keywords primarily in text */
+.description--bold {
+  font-weight: 600;
+}
+
+.link {
+  color: var(--darkblue);
+}
+
+.link:hover {
+  font-weight: 600;
+}
+
+/***** MEDIA BREAK POINTS STYLES *****/
+
+@media (max-width: 1240px) {
+}
+
+@media (max-width: 840px) {
+  .site-container {
+    display: block;
+    margin: 0 auto;
+    max-width: 685px;
+    padding: 0 2em 0 2.4em;
+  }
+
+  .pound {
+    left: -1em;
+  }
+}
+
+@media (max-width: 615px) {
+}
+
+@media (max-width: 415px) {
+}

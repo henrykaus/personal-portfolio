@@ -1,0 +1,99 @@
+/***** PROJECTS STYLES *****/
+
+.projects-container {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 0.5fr 0.5fr;
+  margin-top: 1.5em;
+}
+
+.project {
+  border: 2px solid var(--lightgray);
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px var(--lightgray);
+  -webkit-box-shadow: 0px 2px 4px var(--lightgray);
+  padding: 1em 1em 1.5em 1em;
+}
+
+.project:first-of-type {
+  grid-column-start: span 2;
+}
+
+.project:hover {
+  border-color: var(--blue);
+  box-shadow: 0px 2px 4px var(--blue);
+  -webkit-box-shadow: 0px 2px 4px var(--blue);
+}
+
+.project__name {
+  margin: 0;
+}
+
+.project__link {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.project__link:hover {
+  color: var(--darkblue);
+  text-decoration: underline;
+}
+
+.project__contents > .description {
+  font-size: 0.9em;
+}
+
+.project__contents > .description:last-of-type {
+  margin-bottom: 0;
+}
+
+.project__image {
+  border-radius: 5px;
+  box-shadow: -6px 6px 14px var(--gray);
+  -webkit-box-shadow: -6px 6px 14px var(--gray);
+  display: block;
+  height: auto;
+  margin: 1.5em auto 0 auto;
+  max-width: 100%;
+}
+
+.link > .project__image {
+  transition: 0.2s ease-out;
+}
+
+.link > .project__image:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease-out;
+}
+
+/***** MEDIA BREAK POINTS STYLES *****/
+
+@media (max-width: 1240px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project:first-of-type {
+    grid-column-start: span 1;
+  }
+}
+
+@media (max-width: 840px) {
+  .projects-container {
+    grid-template-columns: 0.5fr 0.5fr;
+  }
+
+  .project:first-of-type {
+    grid-column-start: span 2;
+  }
+}
+
+@media (max-width: 615px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project:first-of-type {
+    grid-column-start: span 1;
+  }
+}

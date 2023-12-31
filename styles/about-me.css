@@ -1,0 +1,54 @@
+/***** ABOUT ME STYLES *****/
+
+#about-me.site-article {
+  margin-top: 4.8em;
+}
+
+.about__header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.about__header > .article-header {
+  margin-bottom: 0;
+}
+
+/* External Platform Links */
+.link-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link-list__item {
+  display: inline;
+}
+
+.link-list__link {
+  border-radius: 5px;
+  color: var(--black);
+  display: inline-flex;
+  padding: 0.35em;
+  transition: 0.2s ease-in-out;
+}
+
+.link-list__link:hover {
+  background-color: var(--blue);
+  box-shadow: 0px 0px 8px var(--blue);
+  transition: 0.2s ease-in-out;
+}
+
+.icon {
+  width: 1.75em;
+  height: 1.75em;
+}
+
+/***** MEDIA BREAK POINTS STYLES *****/
+
+@media (max-width: 840px) {
+  #about-me.site-article {
+    margin-top: 0;
+  }
+}
