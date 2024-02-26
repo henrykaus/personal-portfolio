@@ -164,10 +164,11 @@ const handleFormButtonClick = (event) => {
  * displays a "thank you" message.
  */
 const handleContactFormSubmit = (event) => {
+  event.preventDefault();
   console.group('========= Form Submission =========');
-  console.log('Name:', form.elements.name.value);
-  console.log('Email:', form.elements.email.value);
-  console.log('Reason For Contact:', form.elements.reason.value);
+  console.log('Name:', contactForm.elements.name.value);
+  console.log('Email:', contactForm.elements.email.value);
+  console.log('Reason For Contact:', contactForm.elements.reason.value);
   console.groupEnd();
 
   $('#contact-form').empty().removeClass('contact__form--open');
@@ -178,7 +179,6 @@ const handleContactFormSubmit = (event) => {
   $('#open-form-btn').remove();
 
   formIsOpen = false;
-  event.preventDefault();
 };
 
 $(document).ready(() => {
