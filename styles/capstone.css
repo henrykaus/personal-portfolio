@@ -135,7 +135,7 @@
   margin: 0;
   padding: 0;
   position: absolute;
-  width: calc(100% - 2.2em);
+  width: calc(100% - 39px);
 }
 
 .capstone__link {
@@ -179,16 +179,6 @@
 }
 
 @media (max-width: 415px) {
-  /* Makes capstone links be absolute with respect to the .capstone-card-container */
-  .capstone__card__content {
-    position: static;
-  }
-
-  /* Same as above comment */
-  .capstone__link-list {
-    bottom: 1em;
-  }
-
   .capstone-card-container {
     height: 400px;
   }
