@@ -103,13 +103,18 @@ button {
   font-weight: 600;
 }
 
+.description--bold .link:hover,
+.description--bold .link:focus {
+  font-weight: 600;
+}
+
 .link {
   color: var(--darkblue);
 }
 
 .link:hover,
 .link:focus {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /***** MEDIA BREAK POINTS STYLES *****/
