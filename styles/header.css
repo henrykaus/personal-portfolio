@@ -50,11 +50,7 @@
 }
 
 .nav__link:hover {
-  background-color: var(--lightred);
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px var(--lightred);
-  -webkit-box-shadow: 0px 0px 8px var(--lightred);
-  font-weight: 500;
+  font-weight: 600;
   transition: 0.1s ease-in-out;
 }
 
@@ -169,7 +165,6 @@
   }
 
   .nav__link:hover {
-    border-radius: 0;
     font-weight: 450;
   }
 }

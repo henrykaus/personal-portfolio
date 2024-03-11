@@ -50,16 +50,11 @@ h6 {
 }
 
 /* All buttons and inputs should have the Rubik font-family */
-button,
-input[type='text'],
-input[type='email'],
-input[type='submit'],
-textarea {
+button {
   font-family: var(--body-font);
 }
 
-button,
-input[type='submit'] {
+button {
   cursor: pointer;
 }
 
