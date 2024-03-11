@@ -101,11 +101,11 @@
     transition: transform 0.2s ease-out;
   }
 
-  .nav__btn.open {
+  .nav__btn.nav__btn--open {
     padding: 0.5em 0.8em;
   }
 
-  .nav__btn.open > svg {
+  .nav__btn.nav__btn--open > svg {
     transform: rotate(180deg);
     transition: transform 0.2s ease-out;
   }
@@ -128,7 +128,7 @@
     right: 0;
   }
 
-  .nav__list--shown {
+  .nav__list.nav__list--shown {
     display: block;
   }
 

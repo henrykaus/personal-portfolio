@@ -277,7 +277,7 @@
         <h2 class="article-header"><span class="pound">#</span>capstone</h2>
         <div class="capstone-card-container">
           <!-- Capstone Card Front -->
-          <section class="capstone__card capstone__card--front">
+          <section class="capstone__card capstone__card--front" aria-hidden="false">
             <h3 class="capstone__title">WonderTix</h3>
             <p class="capstone__tagline">
               Creating a ticketing management platform in a team lead position
@@ -285,9 +285,9 @@
           </section>
 
           <!-- Capstone Card Back -->
-          <section class="capstone__card capstone__card--back">
+          <section class="capstone__card capstone__card--back" aria-hidden="true">
             <img
-              alt="View of WonderTix admin page"
+              alt="WonderTix admin page"
               src="img/wondertix-admin.png"
               class="capstone__card--back__image"
             >
@@ -361,7 +361,7 @@
             </article>
           </section>
           <button
-            aria-label="Flip capstone card"
+            aria-label="Flip capstone card to back"
             class="capstone__flip-btn"
             id="flip-btn"
           >
@@ -533,9 +533,7 @@
           href="https://www.linkedin.com/in/henrykaus"
           target="_blank"
         >
-          <p id="contact-instructions" class="description">
-            If you'd like to be in contact, reach out on my LinkedIn
-          </p>
+          If you'd like to be in contact, reach out on my LinkedIn
           <i class="contact__link__icon fa-solid fa-arrow-right fa-lg"></i>
         </a>
       </article>

@@ -4,8 +4,10 @@
   align-items: center;
   border-radius: 12px;
   border: 2px solid var(--lightgray);
+  color: var(--darkgray);
   column-gap: 1em;
   display: flex;
+  font-size: 0.9em;
   justify-content: space-between;
   margin-bottom: 2em;
   padding: 1em 1.25em 1em 1em;
@@ -18,13 +20,7 @@
   transition: 0.2s ease-in-out;
 }
 
-.contact__link .description {
-  font-size: 0.9em;
-  margin: 0;
-}
-
 .contact__link__icon {
-  color: var(--darkgray);
   transition: 0.2s ease-in-out;
 }
 
