@@ -55,8 +55,13 @@
   -webkit-box-shadow: -6px 6px 14px var(--gray);
   display: block;
   height: auto;
-  margin: 1.5em auto 0 auto;
   max-width: 100%;
+}
+
+.project__contents > .link {
+  display: block;
+  margin: 1.5em auto 0 auto;
+  width: fit-content;
 }
 
 .link > .project__image {
