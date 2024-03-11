@@ -77,6 +77,7 @@
 .capstone__flip-btn:hover {
   background-color: var(--darkblue);
   box-shadow: 0px 0px 8px var(--darkblue);
+  -webkit-box-shadow: 0px 0px 8px var(--darkblue);
   color: var(--white);
   transition: 0.2s ease-out;
 }

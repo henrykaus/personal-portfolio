@@ -53,6 +53,7 @@
   background-color: var(--lightred);
   border-radius: 5px;
   box-shadow: 0px 0px 8px var(--lightred);
+  -webkit-box-shadow: 0px 0px 8px var(--lightred);
   font-weight: 500;
   transition: 0.1s ease-in-out;
 }
