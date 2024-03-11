@@ -1,5 +1,19 @@
 let navIsOpen = false; // Mobile nav is closed when page opens
 let capstoneIsFlipped = false; // Capstone card is front-facing when page opens
+let activeArticleId = ''; // Currently active article ID
+
+/**
+ * jQuery function that checks if an element is fully within the viewable window.
+ */
+$.fn.isFullyInViewport = function () {
+  const elementTop = $(this).offset().top;
+  const elementBottom = elementTop + $(this).outerHeight();
+
+  const viewportTop = $(window).scrollTop();
+  const viewportBottom = viewportTop + $(window).height();
+
+  return elementTop > viewportTop && elementBottom < viewportBottom;
+};
 
 /**
  * On clicking the #dropdown-nav-btn, the mobile menu is either opened or closed.
@@ -51,8 +65,32 @@ const handleFlipCapstoneCard = (event) => {
   capstoneIsFlipped = !capstoneIsFlipped;
 }
 
+/**
+ * When scrolling, highlight the nav link depending on where the user currently
+ * is.
+ */
+const handleScroll = (event) => {
+  let linkIdToActivate = activeArticleId;
+  $('.site-article').each(function() {
+    if (
+      $(this).offset().top - $(window).scrollTop() <= 120 ||
+      $(this).isFullyInViewport()
+    ) {
+      linkIdToActivate = $(this).attr('id');
+    }
+  });
+
+  // Highlight the corresponding nav link if it isn't already active
+  if (linkIdToActivate !== activeArticleId) {
+    $(`.nav__link[href="#${activeArticleId}"]`).removeClass('nav__link--active');
+    $(`.nav__link[href="#${linkIdToActivate}"]`).addClass('nav__link--active');
+    activeArticleId = linkIdToActivate;
+  }
+}
+
 $(document).ready(() => {
   $('#dropdown-nav-btn').on('click', handleNavButtonClick);
   $('.nav__link').on('click', handleNavButtonClick);
   $('#flip-btn').on('click', handleFlipCapstoneCard);
+  $(document).on('scroll', handleScroll);
 });
