@@ -107,7 +107,8 @@ button {
   color: var(--darkblue);
 }
 
-.link:hover {
+.link:hover,
+.link:focus {
   font-weight: 600;
 }
 

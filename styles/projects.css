@@ -35,7 +35,8 @@
   text-decoration: none;
 }
 
-.project__link:hover {
+.project__link:hover,
+.project__link:focus {
   color: var(--darkblue);
   text-decoration: underline;
 }
@@ -62,7 +63,8 @@
   transition: 0.2s ease-out;
 }
 
-.link > .project__image:hover {
+.link:hover > .project__image,
+.link:focus > .project__image {
   transform: scale(1.05);
   transition: 0.2s ease-out;
 }

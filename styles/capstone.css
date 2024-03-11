@@ -74,7 +74,8 @@
   transition: 0.2s ease-out;
 }
 
-.capstone__flip-btn:hover {
+.capstone__flip-btn:hover,
+.capstone__flip-btn:focus {
   background-color: var(--darkblue);
   box-shadow: 0px 0px 8px var(--darkblue);
   -webkit-box-shadow: 0px 0px 8px var(--darkblue);
@@ -82,7 +83,8 @@
   transition: 0.2s ease-out;
 }
 
-.capstone__flip-btn:hover svg {
+.capstone__flip-btn:hover svg,
+.capstone__flip-btn:focus svg {
   transform: rotate(180deg);
   transition: 0.2s ease-out;
 }
@@ -154,7 +156,8 @@
   text-decoration: none;
 }
 
-.capstone__link:hover {
+.capstone__link:hover,
+.capstone__link:focus {
   color: var(--darkblue);
   text-decoration: underline;
 }

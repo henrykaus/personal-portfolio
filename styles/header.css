@@ -49,7 +49,8 @@
   white-space: nowrap;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.nav__link:focus {
   font-weight: 600;
   transition: 0.1s ease-in-out;
 }
