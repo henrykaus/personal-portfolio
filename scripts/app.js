@@ -25,14 +25,14 @@ const handleNavButtonClick = (event) => {
   }
 
   $('.nav__list').toggleClass('nav__list--shown');
-  $('#dropdown-nav-btn').toggleClass('nav__btn--open');
+  $('#dropdown-nav-btn')
+    .blur()
+    .toggleClass('nav__btn--open');
 
   if (navIsOpen) {
-    $('#dropdown-nav-btn')
-      .attr('aria-expanded', 'false');
+    $('#dropdown-nav-btn').attr('aria-expanded', 'false');
   } else {
-    $('#dropdown-nav-btn')
-      .attr('aria-expanded', 'true');
+    $('#dropdown-nav-btn').attr('aria-expanded', 'true');
   }
 
   navIsOpen = !navIsOpen;
@@ -43,6 +43,8 @@ const handleNavButtonClick = (event) => {
  * or back.
  */
 const handleFlipCapstoneCard = (event) => {
+  $('#flip-btn').blur();
+
   if (capstoneIsFlipped) {
     $('.capstone__card--front').attr('aria-hidden', 'false');
     $('.capstone__card--back').attr('aria-hidden', 'true');
