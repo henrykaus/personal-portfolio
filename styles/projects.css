@@ -23,7 +23,6 @@
 .project:hover {
   box-shadow: 0px 6px 14px var(--lightgray);
   -webkit-box-shadow: 0px 6px 14px var(--lightgray);
-  transition: 0.2s ease-in-out;
 }
 
 .project__name {
@@ -71,7 +70,6 @@
 .link:hover > .project__image,
 .link:focus-visible > .project__image {
   transform: scale(1.05);
-  transition: 0.2s ease-out;
 }
 
 /***** MEDIA BREAK POINTS STYLES *****/

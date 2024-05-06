@@ -52,7 +52,6 @@
 .nav__link:hover,
 .nav__link:focus-visible {
   font-weight: 600;
-  transition: 0.1s ease-in-out;
 }
 
 /***** MEDIA BREAK POINTS STYLES *****/
@@ -102,27 +101,21 @@
     border-radius: 5px;
     color: var(--black);
     display: inline;
-    padding: 0.5em 0.8em;
+    padding:  0.65em 0.8em;
     transition: 0.2s ease-out;
   }
 
-  .nav__btn > svg {
+  .nav__btn > i {
     transition: transform 0.2s ease-out;
   }
 
-  .nav__btn.nav__btn--open {
-    padding: 0.5em 0.8em;
-  }
-
-  .nav__btn.nav__btn--open > svg {
+  .nav__btn.nav__btn--open > i {
     transform: rotate(180deg);
-    transition: transform 0.2s ease-out;
   }
 
   .nav__btn:hover {
     background-color: var(--black-opaque);
     color: var(--white);
-    transition: 0.2s ease-out;
   }
 
   .nav__list {
