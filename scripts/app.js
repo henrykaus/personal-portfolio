@@ -63,7 +63,9 @@ const handleFlipCapstoneCard = (event) => {
 
     $('.capstone__card--front').fadeIn(500);
     $('.capstone__card--back').fadeOut(500);
-    $('#flip-btn').attr('aria-label', 'Flip capstone card to back');
+    $('#flip-btn')
+    .attr('aria-label', 'Flip capstone card to back')
+    .toggleClass('capstone__flip-btn--flipped');
   } else {
     $('.capstone__card--front').attr('aria-hidden', 'true');
     $('.capstone__card--back').attr('aria-hidden', 'false');
@@ -73,7 +75,9 @@ const handleFlipCapstoneCard = (event) => {
       .css('display', 'flex')
       .hide()
       .fadeIn(500);
-    $('#flip-btn').attr('aria-label', 'Flip capstone card to front');
+    $('#flip-btn')
+      .attr('aria-label', 'Flip capstone card to front')
+      .toggleClass('capstone__flip-btn--flipped');
   }
 
   state.capstoneIsFlipped = !state.capstoneIsFlipped;

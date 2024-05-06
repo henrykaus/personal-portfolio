@@ -74,6 +74,10 @@
   transition: 0.2s ease-out;
 }
 
+.capstone__flip-btn > i {
+  transition: 0.2s ease-out;
+}
+
 .capstone__flip-btn:hover,
 .capstone__flip-btn:focus-visible {
   background-color: var(--darkblue);
@@ -82,8 +86,7 @@
   color: var(--white);
 }
 
-.capstone__flip-btn:hover i,
-.capstone__flip-btn:focus-visible i {
+.capstone__flip-btn--flipped > i {
   transform: rotate(180deg);
 }
 
