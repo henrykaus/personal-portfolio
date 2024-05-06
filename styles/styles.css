@@ -1,5 +1,9 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;450;500;600&family=Roboto+Mono:wght@400;600&display=swap');
+
 /** Import Fonts **/
-@font-face {
+/** TODO: make local fonts work properly on mobile **/
+/* @font-face {
   font-family: 'Roboto Mono';
   src: url(../assets/fonts/RobotoMono.ttf) format("truetype");
 }
@@ -7,7 +11,7 @@
 @font-face {
   font-family: Rubik;
   src: url(../assets/fonts/Rubik.ttf) format("truetype");
-}
+} */
 
 * {
   box-sizing: border-box;
