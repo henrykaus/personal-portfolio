@@ -160,6 +160,10 @@
 .capstone__link:hover,
 .capstone__link:focus-visible {
   color: var(--darkblue);
+}
+
+.capstone__link:hover .capstone__link__text,
+.capstone__link:focus-visible .capstone__link__text {
   text-decoration: underline;
 }
 

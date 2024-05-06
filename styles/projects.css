@@ -30,13 +30,21 @@
 }
 
 .project__link {
+  align-items: center;
   color: var(--black);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 0.22em;
   text-decoration: none;
 }
 
 .project__link:hover,
 .project__link:focus-visible {
   color: var(--darkblue);
+}
+
+.project__link:hover .project__link__text,
+.project__link:focus-visible .project__link__text {
   text-decoration: underline;
 }
 
