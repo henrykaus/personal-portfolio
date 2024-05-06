@@ -26,7 +26,7 @@ const handleNavButtonClick = (event) => {
 
   $('.nav__list').toggleClass('nav__list--shown');
   $('#dropdown-nav-btn')
-    .blur()
+    .trigger('blur')
     .toggleClass('nav__btn--open');
 
   if (navIsOpen) {
@@ -43,7 +43,7 @@ const handleNavButtonClick = (event) => {
  * or back.
  */
 const handleFlipCapstoneCard = (event) => {
-  $('#flip-btn').blur();
+  $('#flip-btn').trigger('blur');
 
   if (capstoneIsFlipped) {
     $('.capstone__card--front').attr('aria-hidden', 'false');
