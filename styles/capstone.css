@@ -16,7 +16,7 @@
 }
 
 .capstone__card.capstone__card--front {
-  background-image: linear-gradient(var(--black-opaque) 100%, var(--black-opaque) 100%), url("../img/wondertix.png");
+  background-image: linear-gradient(var(--black-opaque) 100%, var(--black-opaque) 100%), url("../img/wondertix.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
