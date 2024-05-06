@@ -104,7 +104,7 @@ button {
 }
 
 .description--bold .link:hover,
-.description--bold .link:focus {
+.description--bold .link:focus-visible {
   font-weight: 600;
 }
 
@@ -113,7 +113,7 @@ button {
 }
 
 .link:hover,
-.link:focus {
+.link:focus-visible {
   font-weight: 500;
 }
 

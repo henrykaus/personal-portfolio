@@ -90,9 +90,25 @@ const handleScroll = (event) => {
   }
 }
 
+/**
+ * When mobile nav is open, any click outside closes the nav.
+ * 
+ * @param {Event} event
+ */
+const handleClickOutsideDropdown = (event) => {
+  if (!navIsOpen) {
+    return;
+  }
+
+  if ($('#site-nav').has(event.target).length < 1) {
+    handleNavButtonClick(event);
+  }
+}
+
 $(document).ready(() => {
   $('#dropdown-nav-btn').on('click', handleNavButtonClick);
   $('.nav__link').on('click', handleNavButtonClick);
   $('#flip-btn').on('click', handleFlipCapstoneCard);
   $(document).on('scroll', handleScroll);
+  $(document).on('mousedown', handleClickOutsideDropdown);
 });
