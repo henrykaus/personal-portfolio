@@ -1,6 +1,6 @@
-let navIsOpen = false; // Mobile nav is closed when page opens
-let capstoneIsFlipped = false; // Capstone card is front-facing when page opens
-let activeArticleId = ''; // Currently active article ID
+import State from './state.js';
+
+const state = new State();
 
 /**
  * jQuery function that checks if an element is fully within the viewable window.
@@ -28,13 +28,28 @@ const handleNavButtonClick = (event) => {
   $('#dropdown-nav-btn')
     .toggleClass('nav__btn--open');
 
-  if (navIsOpen) {
+  if (state.navIsOpen) {
     $('#dropdown-nav-btn').attr('aria-expanded', 'false');
   } else {
     $('#dropdown-nav-btn').attr('aria-expanded', 'true');
   }
 
-  navIsOpen = !navIsOpen;
+  state.navIsOpen = !state.navIsOpen;
+}
+
+/**
+ * When mobile nav is open, any click outside closes the nav.
+ * 
+ * @param {Event} event
+ */
+const handleClickOutsideDropdown = (event) => {
+  if (!state.navIsOpen) {
+    return;
+  }
+
+  if ($('#site-nav').has(event.target).length < 1) {
+    handleNavButtonClick(event);
+  }
 }
 
 /**
@@ -42,7 +57,7 @@ const handleNavButtonClick = (event) => {
  * or back.
  */
 const handleFlipCapstoneCard = (event) => {
-  if (capstoneIsFlipped) {
+  if (state.capstoneIsFlipped) {
     $('.capstone__card--front').attr('aria-hidden', 'false');
     $('.capstone__card--back').attr('aria-hidden', 'true');
 
@@ -61,7 +76,7 @@ const handleFlipCapstoneCard = (event) => {
     $('#flip-btn').attr('aria-label', 'Flip capstone card to front');
   }
 
-  capstoneIsFlipped = !capstoneIsFlipped;
+  state.capstoneIsFlipped = !state.capstoneIsFlipped;
 }
 
 /**
@@ -69,7 +84,7 @@ const handleFlipCapstoneCard = (event) => {
  * is.
  */
 const handleScroll = (event) => {
-  let linkIdToActivate = activeArticleId;
+  let linkIdToActivate = state.activeArticleId;
   $('.site-article').each(function() {
     if (
       $(this).offset().top - $(window).scrollTop() <= 120 ||
@@ -80,32 +95,17 @@ const handleScroll = (event) => {
   });
 
   // Highlight the corresponding nav link if it isn't already active
-  if (linkIdToActivate !== activeArticleId) {
-    $(`.nav__link[href="#${activeArticleId}"]`).removeClass('nav__link--active');
+  if (linkIdToActivate !== state.activeArticleId) {
+    $(`.nav__link[href="#${state.activeArticleId}"]`).removeClass('nav__link--active');
     $(`.nav__link[href="#${linkIdToActivate}"]`).addClass('nav__link--active');
-    activeArticleId = linkIdToActivate;
-  }
-}
-
-/**
- * When mobile nav is open, any click outside closes the nav.
- * 
- * @param {Event} event
- */
-const handleClickOutsideDropdown = (event) => {
-  if (!navIsOpen) {
-    return;
-  }
-
-  if ($('#site-nav').has(event.target).length < 1) {
-    handleNavButtonClick(event);
+    state.activeArticleId = linkIdToActivate;
   }
 }
 
 $(document).ready(() => {
   $('#dropdown-nav-btn').on('click', handleNavButtonClick);
   $('.nav__link').on('click', handleNavButtonClick);
+  $(document).on('mousedown', handleClickOutsideDropdown);
   $('#flip-btn').on('click', handleFlipCapstoneCard);
   $(document).on('scroll', handleScroll);
-  $(document).on('mousedown', handleClickOutsideDropdown);
 });
