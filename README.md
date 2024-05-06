@@ -12,8 +12,6 @@ To run and deploy this code using GitHub Pages...
 2. For icons to render, create a free Font Awesome account at https://fontawesome.com/start.
    - Enter your email on this page and click `Send Kit Embed Code`.
    - Check your email and follow the steps to create a password and optionally fill in your information.
-   - You'll be taken to your kit's main page. On the `Settings` tab, select `SVG` for the technology type.
-   - Now go back to the `Set Up` tab, and copy the `<script>` code and paste that in `index.html` in the `<head>` over my Font Awesome `<script>` element.
 3. Publish the site using GitHub Pages.
    - In your GitHub repo, go to the `Settings` tab.
    - Click on the `Pages` menu.
