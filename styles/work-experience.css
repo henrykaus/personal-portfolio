@@ -13,8 +13,11 @@
 }
 
 .work-card__date {
+  color: var(--mediumgray);
   margin: 0;
   font-size: 0.85em;
+  font-weight: 450;
+  letter-spacing: -0.02em;
 }
 
 .position {
