@@ -86,6 +86,10 @@
   color: var(--white);
 }
 
+.capstone__flip-btn:active {
+  transform: scale(0.93);
+}
+
 .capstone__flip-btn--flipped > i {
   transform: rotate(180deg);
 }
@@ -144,10 +148,10 @@
 
 .capstone__link {
   align-items: center;
-  background-color: var(--blue);
+  background-color: var(--lightblue);
   border-radius: 3px;
-  box-shadow: 0px 2px 8px var(--blue);
-  -webkit-box-shadow: 0px 2px 8px var(--blue);
+  box-shadow: 0px 2px 8px var(--lightblue);
+  -webkit-box-shadow: 0px 2px 8px var(--lightblue);
   color: var(--black);
   display: flex;
   font-size: 0.8em;
@@ -160,6 +164,10 @@
 .capstone__link:hover,
 .capstone__link:focus-visible {
   color: var(--darkblue);
+}
+
+.capstone__link:active {
+  color: var(--darkerblue);
 }
 
 .capstone__link:hover .capstone__link__text,

@@ -38,14 +38,18 @@
   justify-content: center;
   width: 1.4em;
   text-decoration: none;
-  transition: 0.2s ease-in-out;
+  transition: 0.15s ease-in-out;
 }
 
 .link-list__link:hover,
 .link-list__link:focus-visible {
-  background-color: var(--blue);
-  box-shadow: 0px 0px 8px var(--blue);
-  -webkit-box-shadow: 0px 0px 8px var(--blue);
+  background-color: var(--lightblue);
+  box-shadow: 0px 0px 8px var(--lightblue);
+  -webkit-box-shadow: 0px 0px 8px var(--lightblue);
+}
+
+.link-list__link:active {
+  transform: scale(0.93);
 }
 
 /***** MEDIA BREAK POINTS STYLES *****/

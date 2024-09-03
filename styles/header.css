@@ -54,6 +54,10 @@
   font-weight: 600;
 }
 
+.nav__link:active {
+  transform: translate(0.2em, 0);
+}
+
 /***** MEDIA BREAK POINTS STYLES *****/
 
 @media (min-width: 841px) {
@@ -118,6 +122,10 @@
     color: var(--white);
   }
 
+  .nav__btn:active {
+    background-color: var(--darkgray);
+  }
+
   .nav__list {
     background-color: var(--white);
     border: 2px solid var(--lightgray);
@@ -161,4 +169,8 @@
   .nav__link:hover {
     font-weight: 450;
   }
+
+  .nav__link:active {
+    transform: none;
+  }  
 }

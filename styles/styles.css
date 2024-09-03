@@ -36,8 +36,9 @@ body {
   --darkgray: #4f4f4f;
   --black: #292929;
   --black-opaque: rgba(0, 0, 0, 0.4);
-  --blue: #b5e2fa;
+  --lightblue: #b5e2fa;
   --darkblue: #076ba2;
+  --darkerblue: #065682;
   --lightred: #e8c8c8;
   --red: #fcbcb8;
 
@@ -128,6 +129,10 @@ button {
 .link:hover,
 .link:focus-visible {
   font-weight: 500;
+}
+
+.link:active {
+  color: var(--darkerblue);
 }
 
 /***** MEDIA BREAK POINTS STYLES *****/

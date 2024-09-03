@@ -16,7 +16,7 @@
 }
 
 .contact__link:hover,
-.contact__link-visible {
+.contact__link:focus-visible {
   box-shadow: 0px 2px 4px var(--lightgray);
   -webkit-box-shadow: 0px 2px 4px var(--lightgray);
 }
@@ -29,6 +29,12 @@
 .contact__link:focus-visible .contact__link__icon {
   color: var(--darkblue);
   transform: translateX(0.2em);
+}
+
+.contact__link:active {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  transform: scale(0.99);
 }
 
 /***** MEDIA BREAK POINTS STYLES *****/

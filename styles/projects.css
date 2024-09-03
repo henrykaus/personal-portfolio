@@ -43,6 +43,10 @@
   color: var(--darkblue);
 }
 
+.project__link:active {
+  color: var(--darkerblue);
+}
+
 .project__link:hover .project__link__text,
 .project__link:focus-visible .project__link__text {
   text-decoration: underline;
@@ -78,6 +82,10 @@
 .link:hover > .project__image,
 .link:focus-visible > .project__image {
   transform: scale(1.05);
+}
+
+.link:active > .project__image {
+  transform: scale(1.03);
 }
 
 /***** MEDIA BREAK POINTS STYLES *****/
