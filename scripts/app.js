@@ -17,7 +17,7 @@ $.fn.isFullyInViewport = function () {
 
 /**
  * On clicking the #dropdown-nav-btn, the mobile menu is either opened or closed.
- * On clicking the .nav__link or outside menu, the menu is closed.
+ * On clicking a .nav__link or outside menu, the menu is closed.
  */
 const handleNavButtonClick = (event) => {
   // On non-mobile ignore any function calls
@@ -34,10 +34,10 @@ const handleNavButtonClick = (event) => {
     // Close nav
     $('.nav').removeClass('nav--shown');
 
-    // Wait for animation (300ms) to settle before removing visibility
+    // Wait for animation (300ms) to settle before removing visibility. The check
+    // ensures that at the time the class is ultimately removed, the nav is
+    // guarenteed to already be closed
     window.setTimeout(() => {
-      // This ensures that at the time the class is ultimately removed, the nav
-      // will be closed
       if (!state.navIsOpen) {
         $('.nav__list').removeClass('visible');
       }
