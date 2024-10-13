@@ -93,10 +93,19 @@
   /* Make mobile nav */
   .nav {
     align-self: center;
+    display: grid;
     grid-area: nav-btn;
+    grid-template-rows: min-content 0fr;
     justify-self: right;
     margin: 0;
-    position: relative;
+    position: absolute;
+    right: 2em;
+    top: 5.25em;
+    transition: grid-template-rows 0.3s ease;
+  }
+
+  .nav.nav--shown {
+    grid-template-rows: min-content 1fr;
   }
 
   .nav__btn {
@@ -105,16 +114,18 @@
     border-radius: 5px;
     color: var(--black);
     display: inline;
+    justify-self: end;
     padding:  0.65em 0.8em;
     transition: 0.2s ease-out;
+    width: min-content;
   }
 
   .nav__btn > i {
     transition: transform 0.2s ease-out;
   }
 
-  .nav__btn.nav__btn--open > i {
-    transform: rotate(180deg);
+  .nav.nav--shown .nav__btn > i {
+    transform: rotateX(180deg);
   }
 
   .nav__btn:hover {
@@ -128,18 +139,25 @@
 
   .nav__list {
     background-color: var(--white);
-    border: 2px solid var(--lightgray);
+    border: 0px solid var(--lightgray);
     border-radius: 5px;
     box-shadow: 0px 2px 4px var(--lightgray);
     -webkit-box-shadow: 0px 2px 4px var(--lightgray);
-    display: none;
     margin: 0.75em 0 0 0;
-    position: absolute;
-    right: 0;
+    overflow: hidden;
+    transition: border-width 0.15s ease-in-out;
+
+    /* Stops user from focusing on invisible nav links */
+    visibility: collapse;
   }
 
-  .nav__list.nav__list--shown {
-    display: block;
+  .nav.nav--shown .nav__list {
+    border-width: 2px;
+  }
+
+  .nav__list.visible {
+    /* Re-enabled user to focus on nav links */
+    visibility: visible;
   }
 
   .nav__item:not(:last-child)::after {
@@ -166,7 +184,8 @@
     border-radius: 0 0 3px 3px;
   }
 
-  .nav__link:hover {
+  .nav__link:hover,
+  .nav__link:focus-visible {
     font-weight: 450;
   }
 

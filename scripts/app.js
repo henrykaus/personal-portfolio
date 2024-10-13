@@ -17,21 +17,29 @@ $.fn.isFullyInViewport = function () {
 
 /**
  * On clicking the #dropdown-nav-btn, the mobile menu is either opened or closed.
- * On clicking the .nav__link, the menu is closed.
+ * On clicking the .nav__link or outside menu, the menu is closed.
  */
 const handleNavButtonClick = (event) => {
+  // On non-mobile ignore any function calls
   if ($('#dropdown-nav-btn').css('display') === 'none') {
     return;
   }
 
-  $('.nav__list').toggleClass('nav__list--shown');
-  $('#dropdown-nav-btn')
-    .toggleClass('nav__btn--open');
-
-  if (state.navIsOpen) {
-    $('#dropdown-nav-btn').attr('aria-expanded', 'false');
-  } else {
+  if (!state.navIsOpen) {
+    // Open nav
+    $('.nav').addClass('nav--shown');
+    $('.nav__list').addClass('visible');
     $('#dropdown-nav-btn').attr('aria-expanded', 'true');
+  } else {
+    // Close nav
+    $('.nav').removeClass('nav--shown');
+
+    // Wait for animation (300ms) to settle before removing visibility
+    window.setTimeout(() => {
+      $('.nav__list').removeClass('visible');
+    }, 300);
+
+    $('#dropdown-nav-btn').attr('aria-expanded', 'false');
   }
 
   state.navIsOpen = !state.navIsOpen;
@@ -64,8 +72,8 @@ const handleFlipCapstoneCard = (event) => {
     $('.capstone__card--front').fadeIn(500);
     $('.capstone__card--back').fadeOut(500);
     $('#flip-btn')
-    .attr('aria-label', 'Flip capstone card to back')
-    .toggleClass('capstone__flip-btn--flipped');
+      .attr('aria-label', 'Flip capstone card to back')
+      .toggleClass('capstone__flip-btn--flipped');
   } else {
     $('.capstone__card--front').attr('aria-hidden', 'true');
     $('.capstone__card--back').attr('aria-hidden', 'false');
