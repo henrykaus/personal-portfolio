@@ -30,11 +30,7 @@
 }
 
 .project__link {
-  align-items: center;
   color: var(--black);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em 0.22em;
   text-decoration: none;
 }
 
