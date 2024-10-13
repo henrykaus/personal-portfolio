@@ -36,7 +36,11 @@ const handleNavButtonClick = (event) => {
 
     // Wait for animation (300ms) to settle before removing visibility
     window.setTimeout(() => {
-      $('.nav__list').removeClass('visible');
+      // This ensures that at the time the class is ultimately removed, the nav
+      // will be closed
+      if (!state.navIsOpen) {
+        $('.nav__list').removeClass('visible');
+      }
     }, 300);
 
     $('#dropdown-nav-btn').attr('aria-expanded', 'false');
