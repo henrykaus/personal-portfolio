@@ -10,7 +10,9 @@
   font-size: 0.9em;
   justify-content: space-between;
   margin-bottom: 2em;
-  padding: 1em 1.25em 1em 1em;
+  padding-bottom: 1em;
+  padding-inline: 1em 1.25em;
+  padding-top: 1em;
   text-decoration: none;
   transition: 0.2s ease-in-out;
 }
@@ -29,6 +31,11 @@
 .contact__link:focus-visible .contact__link__icon {
   color: var(--darkblue);
   transform: translateX(0.2em);
+}
+
+[dir=rtl] .contact__link:hover .contact__link__icon,
+[dir=rtl] .contact__link:focus-visible .contact__link__icon {
+  transform: scaleX(-1) translateX(0.2em);
 }
 
 .contact__link:active {

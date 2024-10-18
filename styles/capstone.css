@@ -22,7 +22,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 1.5em;
+  padding-inline-start: 1.5em;
+}
+
+[dir=rtl] .capstone__card.capstone__card--front {
+  background-image: linear-gradient(var(--black-opaque) 100%, var(--black-opaque) 100%), url("../img/wondertix-rtl.jpg");
+  background-position: right top;
 }
 
 .capstone__card.capstone__card--back {
@@ -48,7 +53,7 @@
   bottom: 0;
   content: "";
   height: 1px;
-  left: 0.1em;
+  inset-inline-start: 0.1em;
   position: absolute;
   width: 2.5em;
 }
@@ -57,7 +62,7 @@
   color: var(--lightgray);
   font-size: 0.9em;
   margin-bottom: 0;
-  margin-left: 0.1em;
+  margin-inline-start: 0.1em;
   min-width: 11em;
   width: 33%;
 }
@@ -68,9 +73,9 @@
   border-radius: 8px;
   bottom: 1em;
   color: var(--darkblue);
+  inset-inline-end: 1em;
   padding: 0.85em 0.7em;
   position: absolute;
-  right: 1em;
   transition: 0.2s ease-out;
 }
 
@@ -96,7 +101,7 @@
 
 .capstone__card--back__image {
   margin: calc(-1em - 2px);
-  margin-right: 0;
+  margin-inline-end: 0;
   object-fit: cover;
   width: 40%;
 }
@@ -123,7 +128,8 @@
 
 .capstone__card.capstone__card--back .list {
   font-size: 0.8em;
-  margin-left: 1.7em;
+  margin-inline: 1.7em 0;
+  padding: 0;
 }
 
 .capstone__card.capstone__card--back .list__item+.list__item {
@@ -132,6 +138,9 @@
 
 .capstone__card.capstone__card--back .list__item .fa-li {
   color: var(--darkblue);
+
+  /* Override FA style */
+  inset-inline-start: calc(var(--fa-li-width, 2em) * -1);
 }
 
 .capstone__link-list {

@@ -96,7 +96,7 @@ button {
 .pound {
   color: var(--mediumgray);
   font-weight: 400;
-  left: -1.25em;
+  inset-inline-start: -1.25em;
   position: absolute;
 }
 
@@ -136,6 +136,10 @@ button {
   color: var(--darkerblue);
 }
 
+[dir=rtl] .fa-dir-flip {
+  transform: scaleX(-1);
+}
+
 /***** MEDIA BREAK POINTS STYLES *****/
 
 @media (max-width: 1240px) {
@@ -146,11 +150,13 @@ button {
     display: block;
     margin: 0 auto;
     max-width: 685px;
-    padding: 0 2em 0 2.4em;
+    padding-bottom: 0;
+    padding-inline: 2.4em 2em;
+    padding-top: 0;
   }
 
   .pound {
-    left: -1em;
+    inset-inline-start: -1em;
   }
 }
 
