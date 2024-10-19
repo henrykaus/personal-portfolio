@@ -32,12 +32,14 @@ const setLangDirection = (event) => {
 }
 
 /**
- * Function called when the html attributes change
+ * Function called when the html attributes change and sets the language
+ * direction as needed.
+ * 
  * @param {MutationRecord[]} mutationsList 
  */
 const langMutationCallback = (mutationsList) => {
   for (const mutation of mutationsList) {
-    if (mutation.type === "attributes" && mutation.attributeName === "lang") {
+    if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
       setLangDirection();
     }
   }
