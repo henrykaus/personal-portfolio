@@ -4,6 +4,7 @@
  */
 
 const RTL_LANGUAGES = ['ar', 'fa', 'he', 'iw', 'kd', 'pk', 'ps', 'ug', 'ur', 'yi'];
+const htmlElement = document.getElementsByTagName('html').item(0);
 
 /**
  * Gets the language direction given a language code.
@@ -20,29 +21,12 @@ const getLangDirection = (languageCode) => {
  * Set the <html> dir attribute based on the translation language.
  */
 const setLangDirection = () => {
-  const htmlLang = document.querySelector('html').lang;
-  const dir = getLangDirection(htmlLang);
-
-  document.querySelector('html').setAttribute('dir', dir);
-}
-
-/**
- * Function called when the html attributes change and sets the language
- * direction as needed.
- * 
- * @param {MutationRecord[]} mutationsList 
- */
-const langMutationCallback = (mutationsList) => {
-  for (const mutation of mutationsList) {
-    if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
-      setLangDirection();
-      break;
-    }
-  }
+  const dir = getLangDirection(htmlElement.lang);
+  htmlElement.setAttribute('dir', dir);
 }
 
 // ACTIONS THAT SHOULD HAPPEN PRIOR TO DOCUMENT READY
 setLangDirection();
 
-const langObserver = new MutationObserver(langMutationCallback)
-langObserver.observe(document.querySelector('html'), { attributes: true });
+const langObserver = new MutationObserver(setLangDirection)
+langObserver.observe(htmlElement, { attributeFilter: ['lang'] });
