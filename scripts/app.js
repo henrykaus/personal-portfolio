@@ -1,7 +1,6 @@
 import State from './state.js';
 
 const state = new State();
-const RTL_LANGS = ['ar', 'fa', 'he', 'iw', 'kd', 'pk', 'ps', 'ug', 'ur', 'yi'];
 
 /**
  * jQuery function that checks if an element is fully within the viewable window.
@@ -119,20 +118,11 @@ const handleScroll = (event) => {
   }
 }
 
-const setLangDirection = (event) => {
-  const lang = window.navigator.language;
-  const abbrev = lang.split('-')[0].toLowerCase();
-
-  const langDir = RTL_LANGS.includes(abbrev) ? 'rtl' : 'ltr';
-  $('html').attr('dir', langDir);
-}
-
+// ACTIONS THAT SHOULD HAPPEN AFTER DOCUMENT READY
 $(document).ready(() => {
-  setLangDirection();
   $('#dropdown-nav-btn').on('click', handleNavButtonClick);
   $('.nav__link').on('click', handleNavButtonClick);
   $(document).on('mousedown', handleClickOutsideDropdown);
   $('#flip-btn').on('click', handleFlipCapstoneCard);
   $(document).on('scroll', handleScroll);
-  $(window).on('languagechange', setLangDirection)
 });
