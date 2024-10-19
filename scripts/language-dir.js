@@ -8,25 +8,20 @@ const RTL_LANGUAGES = ['ar', 'fa', 'he', 'iw', 'kd', 'pk', 'ps', 'ug', 'ur', 'yi
 /**
  * Gets the language direction given a language code.
  * 
- * @param {string} language 
+ * @param {string} languageCode 
  * @returns 'rtl' or 'ltr'
  */
-const getLangDirection = (language) => {
-  const langAbbrev = language.split('-', 1).at(0).toLowerCase();
+const getLangDirection = (languageCode) => {
+  const langAbbrev = languageCode.split('-', 1).at(0).toLowerCase();
   return RTL_LANGUAGES.includes(langAbbrev) ? 'rtl' : 'ltr';
 }
 
 /**
- * Set the <html> dir attribute based on the browser or translation language.
+ * Set the <html> dir attribute based on the translation language.
  */
-const setLangDirection = (event) => {
-  const browserLang = window.navigator.language;
+const setLangDirection = () => {
   const htmlLang = document.querySelector('html').lang;
-
-  const browserLangDir = getLangDirection(browserLang);
-  const htmlLangDir = getLangDirection(htmlLang);
-
-  const dir = (browserLangDir === 'rtl' || htmlLangDir === 'rtl') ? 'rtl' : 'ltr';
+  const dir = getLangDirection(htmlLang);
 
   document.querySelector('html').setAttribute('dir', dir);
 }
@@ -41,13 +36,13 @@ const langMutationCallback = (mutationsList) => {
   for (const mutation of mutationsList) {
     if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
       setLangDirection();
+      break;
     }
   }
 }
 
 // ACTIONS THAT SHOULD HAPPEN PRIOR TO DOCUMENT READY
 setLangDirection();
-window.addEventListener('languagechange', setLangDirection);
 
 const langObserver = new MutationObserver(langMutationCallback)
 langObserver.observe(document.querySelector('html'), { attributes: true });
