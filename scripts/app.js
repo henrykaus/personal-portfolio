@@ -134,5 +134,5 @@ $(document).ready(() => {
   $(document).on('mousedown', handleClickOutsideDropdown);
   $('#flip-btn').on('click', handleFlipCapstoneCard);
   $(document).on('scroll', handleScroll);
-  $(document).on('languagechange', setLangDirection)
+  $(window).on('languagechange', setLangDirection)
 });
