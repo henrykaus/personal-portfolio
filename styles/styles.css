@@ -34,6 +34,7 @@ body {
   --gray: #9e9e9e;
   --mediumgray: #666666;
   --darkgray: #4f4f4f;
+  --darkergray: #3f3f3f;
   --black: #292929;
   --black-opaque: rgba(0, 0, 0, 0.4);
   --lightblue: #b5e2fa;
@@ -75,7 +76,9 @@ button {
   display: flex;
   gap: 1em;
   justify-content: space-evenly;
-  margin: 0 1em;
+  margin: 0 auto;
+  max-width: 1710px;
+  padding: 0 1em;
   position: relative;
 }
 
@@ -93,8 +96,9 @@ button {
   position: relative;
 }
 
-.pound {
+.article-header::before {
   color: var(--mediumgray);
+  content: '#';
   font-weight: 400;
   inset-inline-start: -1.25em;
   position: absolute;
@@ -115,12 +119,13 @@ button {
 
 /* Class used for keywords primarily in text */
 .description--bold {
-  font-weight: 600;
+  font-weight: 500;
+  color: var(--darkergray);
 }
 
 .description--bold .link:hover,
 .description--bold .link:focus-visible {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .link {
@@ -155,7 +160,7 @@ button {
     padding-top: 0;
   }
 
-  .pound {
+  .article-header::before {
     inset-inline-start: -1em;
   }
 }
