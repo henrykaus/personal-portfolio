@@ -11,7 +11,7 @@ To run and deploy this code using GitHub Pages...
 1. Fork or copy this repo into your own repository.
 2. Remove the `CNAME` file from the repo.
 3. In `index.html`, remove both the `<meta property="og:url" />` and `<link rel="canonical" />` elements from the `<head>`.
-2. Publish the site using GitHub Pages.
+4. Publish the site using GitHub Pages.
    - In your GitHub repo, go to the `Settings` tab.
    - Click on the `Pages` menu.
    - Under `Branch`, where it says "None", select the branch to deploy from (probably `main`) and hit `Save`.
