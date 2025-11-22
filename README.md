@@ -9,10 +9,9 @@ Here is my interactive personal portfolio website. This site was originally crea
 To run and deploy this code using GitHub Pages...
 
 1. Fork or copy this repo into your own repository.
-2. For icons to render, create a free Font Awesome account at https://fontawesome.com/start.
-   - Enter your email on this page and click `Send Kit Embed Code`.
-   - Check your email and follow the steps to create a password and optionally fill in your information.
-3. Publish the site using GitHub Pages.
+2. Remove the `CNAME` file from the repo.
+3. In `index.html`, remove both the `<meta property="og:url" />` and `<link rel="canonical" />` elements from the `<head>`.
+2. Publish the site using GitHub Pages.
    - In your GitHub repo, go to the `Settings` tab.
    - Click on the `Pages` menu.
    - Under `Branch`, where it says "None", select the branch to deploy from (probably `main`) and hit `Save`.
