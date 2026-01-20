@@ -20,10 +20,21 @@
   letter-spacing: -0.02em;
 }
 
+.position-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .position {
   display: inline;
   font-size: 1em;
   margin: 0;
+}
+
+.previous-position {
+  color: var(--mediumgray);
+  margin-top: 0.25em;
 }
 
 .work-card__location {
